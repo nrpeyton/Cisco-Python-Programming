@@ -1,0 +1,36 @@
+# mutable
+a_list = [1, 2, True, "a string", (3, 4), [5, 6], None]
+
+# immutable
+a_tuple = (1, 2, True, "a string", (3, 4), [5, 6], None)
+
+# a whole tuple can be added/removed in its entirety from a list, but a tuple itself can't be amended.
+list_of_tuples = [('item_1', 'item_2', 'item_3'), ('item_1', 'item_2', 'item_3')]  # 2 list elements / 2 tuples. 3 items in each tuple
+list_of_tuples = [('cat', 'chat'), ('dog', 'chien'), ('horse', 'cheval')]  # 3 list elements / 3 tuples. 2 items in each tuple
+
+# dictionary - consists of key-value pairs
+dictionary = {'cat': 'chat', 'dog': 'chien', 'horse': 'cheval'} # english/french
+
+
+dictionary = {
+              "cat": "chat", 
+              "dog": "chien", 
+              "horse": "cheval"
+             }
+
+print(dictionary)
+
+dictionary['swan'] = 'cygne' # inserts a pair
+print(dictionary)
+
+dictionary.update({'duck': "canard"}) # inserts or updates a pair
+print(dictionary)
+
+del dictionary['dog'] # key deletion
+print(dictionary)
+
+dictionary.popitem() # last key deletion
+print(dictionary)
+
+# dictionary[variable] or dictionary["key"] accesses the key's associated data structure, not the key-name itself.
+print(dictionary['cat'])
