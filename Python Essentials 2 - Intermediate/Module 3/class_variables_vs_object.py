@@ -45,6 +45,6 @@ example_object = ExampleClass()
                                         # outputs:
 print(hasattr(example_object, 'b'))     # true
 print(hasattr(example_object, 'a'))     # true
-print(hasattr(ExampleClass, 'b'))       # false
+print(hasattr(ExampleClass, 'b'))       # false - line only checks for class variables
 print(hasattr(ExampleClass, 'a'))       # true
 
