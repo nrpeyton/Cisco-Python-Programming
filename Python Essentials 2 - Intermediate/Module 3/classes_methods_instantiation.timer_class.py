@@ -5,7 +5,7 @@ TIME: 30-60 minutes
 
 OBJECTIVES:
 - Define classes from scratch.
-- Utilize instance variables and methods.
+- Utilise instance variables and methods.
 
 SCENARIO:
 Develop a Timer class to count seconds with specific functionalities. This class is critical as it will be used in international rocket missions to Mars.

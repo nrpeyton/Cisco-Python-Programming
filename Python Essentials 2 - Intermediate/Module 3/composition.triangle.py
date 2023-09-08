@@ -65,4 +65,4 @@ print(triangle.perimeter())
 
 
 # NOTES:
-# Completed this without any help or notes, but a thorough understanding of a previous lab definitely helped:  object_properties.points_on_a_plane.py
+# Completed this without any help or notes, but a thorough understanding of the previous lab definitely helped:  object_properties.points_on_a_plane.py
