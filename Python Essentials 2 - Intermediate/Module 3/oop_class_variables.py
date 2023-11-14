@@ -1,8 +1,8 @@
 class ExampleClass:
-    counter = 0 # class attribute, shared by ALL instances
+    counter = 0 # class variable, shared by ALL instances
     def __init__(self, val = 1):
-        self.__first = val # instance attribute, belongs to its own object, and stored seperately in each object
-        ExampleClass.counter += 1  # # class attribute, shared by ALL instances; requires prefix because __init__ is in method scope, focused on instances. To access a class attribute, you must be explicit.
+        self.__first = val # instance variable, belongs to its own object, and stored seperately in each object
+        ExampleClass.counter += 1  # class variable, shared by ALL instances; requires prefix here because __init__ is in method scope, focused on instances. To access a class attribute, you must be explicit.
 
 
 example_object_1 = ExampleClass()
@@ -17,8 +17,4 @@ print(example_object_3.__dict__,                     example_object_3.counter)
 '''
 * each instance attribute requires its own memory location
 ** a class attribute is only stored once
-
-Instance attributes are stored per instance, consuming memory for each object I create. Class attributes are shared across all instances and only stored once, 
-making them more memory-efficient when the attribute's value is supposed to be the same for all instances. This distinction is not just theoretical - it can impact
-performance and resource usage.
 '''

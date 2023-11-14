@@ -1,4 +1,4 @@
-'''                                       2.5.1.9 LAB: Extending Stack Class with Counter
+'''                                       3.2.1.14 LAB: Extending Stack Class with Counter
 
 DIFFICULTY: Easy/Medium
 TIME: 20-45 minutes
@@ -44,3 +44,16 @@ for i in range(100):
     stk.push(i)
     stk.pop()
 print(stk.get_counter())
+
+
+
+
+
+'''
+An improved version counts all popped values instead of just the number of pops.  The output is 4950.  The CountingStack.pop() method
+would be changed to:
+
+    def pop(self):
+        var = Stack.pop(self)
+        self.__counter += var
+'''

@@ -64,5 +64,27 @@ print(triangle.perimeter())
 
 
 
-# NOTES:
-# Completed this without any help or notes, but a thorough understanding of the previous lab definitely helped:  object_properties.points_on_a_plane.py
+''' NOTES:
+-Completed this without any help or notes, but a thorough understanding of the previous lab definitely helped:  object_properties.points_on_a_plane.py
+
+-Composition: This lab demonstrates 'composition', a concept not directly covered in the course materials. Composition occurs when a class (Triangle) is constructed using objects
+from another class (Point), meaning the Triangle 'composes' its structure using Point instances.This results in a "has a" relationship instead of a "is a" relationship and is an 
+alternative to inheritance.  For example, "The Triangle class 'has' Point objects as its vertices".
+
+-Checked the official solution AFTER completing the lab for comparison/reflection, and it is slightly more elegant/concise, due to storing the vertices in a list.  Copied below:
+'''
+
+
+
+
+
+
+class Triangle:
+    def __init__(self, vertice1, vertice2, vertice3):
+        self.__vertices = [vertice1, vertice2, vertice3] # Storing the vertices in a list
+
+    def perimeter(self):
+        per = 0
+        for i in range(3):
+            per += self.__vertices[i].distance_from_point(self.__vertices[(i + 1) % 3]) # Accessing vertices via the list.
+        return per

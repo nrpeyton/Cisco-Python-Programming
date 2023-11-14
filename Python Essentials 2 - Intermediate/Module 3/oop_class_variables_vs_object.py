@@ -17,7 +17,7 @@ print(object1.varia)
 '''
 Naming the variable is the most important aspect of the example because:
 Changing the assignment to self.varia = val would create an instance variable of the same name as the class's one;
-Changing the assignment to varia = val would operate on a method's local variable; (we strongly encourage you to test both of the above cases - this will make it easier for you to remember the difference)
+Changing the assignment to varia = val would operate on a method's local variable;
 '''
 
 ''' SUMMARY:

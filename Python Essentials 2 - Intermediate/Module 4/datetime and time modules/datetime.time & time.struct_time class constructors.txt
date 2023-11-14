@@ -1,0 +1,58 @@
+from datetime import time
+
+t = time(14, 53, 20, 1) # time(hour, minute, second, microsecond, tzinfo, fold)
+
+print("Time:", t)
+print("Hour:", t.hour)
+print("Minute:", t.minute)
+print("Second:", t.second)
+print("Microsecond:", t.microsecond)
+
+
+OUTPUT:
+Time: 14:53:20.000001
+Hour: 14
+Minute: 53
+Second: 20
+Microsecond: 1
+
+
+
+
+
+
+
+from datetime import datetime
+
+dt = datetime(2019, 11, 4, 14, 53)
+
+print("Datetime:", dt)
+print("Date:", dt.date())
+print("Time:", dt.time())
+
+OUTPUT:
+Datetime: 2019-11-04 14:53:00
+Date: 2019-11-04
+Time: 14:53:00
+
+
+
+
+
+
+
+# The time module is part of the Python standard library.  This is not the same as datetime.time above.
+import time 
+
+time.struct_time:
+    tm_year   # specifies the year
+    tm_mon    # specifies the month (value from 1 to 12)
+    tm_mday   # specifies the day of the month (value from 1 to 31)
+    tm_hour   # specifies the hour (value from 0 to 23)
+    tm_min    # specifies the minute (value from 0 to 59)
+    tm_sec    # specifies the second (value from 0 to 61 )
+    tm_wday   # specifies the weekday (value from 0 to 6)
+    tm_yday   # specifies the year day (value from 1 to 366)
+    tm_isdst  # specifies whether daylight saving time applies (1 – yes, 0 – no, -1 – it isn't known)
+    tm_zone   # specifies the timezone name (value in an abbreviated form)
+    tm_gmtoff # specifies the offset east of UTC (value in seconds)

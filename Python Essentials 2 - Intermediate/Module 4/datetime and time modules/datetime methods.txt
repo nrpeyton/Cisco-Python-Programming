@@ -1,0 +1,169 @@
+                                        D A T E   M E T H O D S
+
+from datetime import date
+
+d = date.fromisoformat('2019-11-04') # Takes a date in the YYYY-MM-DD format compliant with the ISO 8601 standard.
+print(d)
+
+
+
+
+
+from datetime import date
+
+today = date.today()
+
+# Date Class Attributes:
+print("Today:", today)
+print("Year:", today.year)
+print("Month:", today.month)
+print("Day:", today.day)
+
+OUTPUT:
+Today: 2023-10-05
+Year: 2023
+Month: 10
+Day: 5
+
+
+
+
+
+
+from datetime import date
+
+d = date(2019, 11, 4)
+
+print(d.weekday()) # Returns the day of the week as an integer (0 is Monday, 6 is Sunday).
+print(d.isoweekday()) # As above but Monday = 1 and Sunday = 7. Is ISO 85601 compliant.
+
+
+
+
+
+
+from datetime import date
+
+d = date(1991, 2, 5)
+print(d)
+
+d = d.replace(year=1992, month=1, day=16) # Replaces the year, month or day.
+print(d)
+
+OUTPUT:
+1991-02-05
+1992-01-16
+
+
+
+
+
+
+
+
+
+                                       D A T E T I M E   M E T H O D S
+
+from datetime import datetime
+
+print("today:", datetime.today()) # Methods that return the current date and time:
+print("now:", datetime.now())
+print("utcnow:", datetime.utcnow())
+
+OUTPUT:
+today: 2023-10-07 18:37:32.319245
+now: 2023-10-07 18:37:32.319655
+utcnow: 2023-10-07 18:37:32.319861
+
+
+
+
+
+from datetime import datetime
+
+dt = datetime(2020, 10, 4, 14, 55)
+print("Timestamp:", dt.timestamp()) # Method returns a float value expressing the number of seconds elapsed between the date and time indicated by the datetime object and January 1, 1970, 00:00:00 (UTC).
+
+OUTPUT:
+Timestamp: 1601823300.0
+
+
+
+
+
+
+                                       D A T E   &   T I M E   F O R M A T T I N G   (dt.StringFormatTime method)
+
+
+from datetime import date
+
+d = date(2020, 1, 4)
+
+# StringFormatTime returns a string with the year, month (zero-padded), and day (zero-padded); formatted according to the three directives (%d, %m, %y).
+print(d.strftime('%Y/%m/%d')) 
+print(d.strftime('%d %m %y'))
+print(d.strftime('%dXX%mXX%y'))
+
+OUTPUT:
+2020/01/04
+04 01 20
+04XX01XX20
+
+
+
+
+
+from datetime import date
+from datetime import time
+from datetime import datetime
+
+d = date(2020, 1, 4)
+print(d.strftime('%y/%m/%d')) # %y returns year without century, %Y returns with century
+print(d.strftime('%Y/%m/%d'))
+
+t = time(14, 53)
+print(t.strftime("%H:%M:%S"))
+
+dt = datetime(2020, 11, 4, 14, 53)
+print(dt.strftime("%y/%B/%d %H:%M:%S")) # %B returns the month as the locale’s full name (i.e., January to December).
+
+OUTPUT:
+20/01/04
+2020/01/04
+14:53:00
+20/November/04 14:53:00
+
+Main directives:
+H                 00, 01, …, 23                    Hour (24-hour clock) as a zero-padded decimal number
+M                 00, 01, …, 59                    Minute as a zero-padded decimal number
+S                 00, 01, …, 59                    Second as a zero-padded decimal number
+
+y                 00, 01, …, 99                    Year without century as a zero-padded decimal number
+m                 01, 02, …, 12                    Month as a zero-padded decimal number
+d                 01, 02, …, 31                    Day of the month as a zero-padded decimal number
+
+w                 0, 1, …, 6                       Weekday as a decimal number, where 0 is Sunday and 6 is Saturday
+A                 Sunday, Monday, …, Saturday      Weekday as locale’s full name
+a                 Sun, Mon, ..., Sat               Weekday as locale’s abbreviated name
+
+B                 January, February, …, December   Month as locale’s full name
+b                 Jan, Feb, ..., Dec               Month as locale’s abbreviated name
+
+            
+All directives:
+https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
+
+
+
+
+
+
+                                       D A T E T I M E   M E T H O D S   (CONTINUED)
+
+from datetime import datetime
+
+# Creates a datetime object from a string representing a date and time.  Requires (2 arguments) with matching format.  Format is specified with directives in the second arg(%).
+dt = datetime.strptime("2019/11/04 14:53:00", "%Y/%m/%d %H:%M:%S") # StringParseTime method 
+print(dt)
+
+NOTE: In the time module (Python Standard Library), there is a function that is similar to this method but its result is a struct_time object.

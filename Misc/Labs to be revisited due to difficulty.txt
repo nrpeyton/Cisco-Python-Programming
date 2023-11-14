@@ -1,3 +1,0 @@
-PCEP Module 4:
--Converting from European 'litres per 100km' to American 'mpg' and vice versa
-- 2.4.1.6 LAB: A LED Display (made a good attempt that works, but need to try it with only 7 segments)

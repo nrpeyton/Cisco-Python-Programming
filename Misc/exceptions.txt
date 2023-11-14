@@ -1,0 +1,140 @@
+ISSUE/CAUSE                                                                                                                               ERROR
+-----------                                                                                                                               -----
+
+An AttributeError occurs when trying to access a non-existent property or method of an object (anything following a dot '.').             AttributeError
+
+NameError is raised when you try to access a local or global name (like a variable, function, or class) that has not been defined.        NameError
+
+A TypeError is raised for operations on mismatched data types where the operation doesn't make sense for the data type, (like adding      TypeError
+a string to an integer) or when inheritance structures in classes lead to an unclear hierarchy, preventing a consistent method 
+resolution order (MRO).
+
+A ValueError is when the data type is correct, but the content within that data type isn't formatted or isn't appropriate for the         ValueError
+operation being attempted.  For example, with `i = int("Hello!")` the type is correct because int() can convert other data types
+(i.e., a string '123' into an integer), so it expects the string to be formatted as numbers.  The problem is with the contents,
+not the data type.
+
+
+
+
+
+
+
+BaseException
+   +---Exception
+   |   +---TypeError
+   |   +---StopAsyncIteration
+   |   +---StopIteration
+   |   +---ImportError
+   |   |   +---ModuleNotFoundError
+   |   |   +---ZipImportError
+   |   +---OSError
+   |   |   +---ConnectionError
+   |   |   |   +---BrokenPipeError
+   |   |   |   +---ConnectionAbortedError
+   |   |   |   +---ConnectionRefusedError
+   |   |   |   +---ConnectionResetError
+   |   |   +---BlockingIOError
+   |   |   +---ChildProcessError
+   |   |   +---FileExistsError
+   |   |   +---FileNotFoundError
+   |   |   +---IsADirectoryError
+   |   |   +---NotADirectoryError
+   |   |   +---InterruptedError
+   |   |   +---PermissionError
+   |   |   +---ProcessLookupError
+   |   |   +---TimeoutError
+   |   |   +---UnsupportedOperation
+   |   |   +---herror
+   |   |   +---gaierror
+   |   |   +---timeout
+   |   |   +---Error
+   |   |   |   +---SameFileError
+   |   |   +---SpecialFileError
+   |   |   +---ExecError
+   |   |   +---ReadError
+   |   +---EOFError
+   |   +---RuntimeError
+   |   |   +---RecursionError
+   |   |   +---NotImplementedError
+   |   |   +---_DeadlockError
+   |   |   +---BrokenBarrierError
+   |   +---NameError
+   |   |   +---UnboundLocalError
+   |   +---AttributeError
+   |   +---SyntaxError
+   |   |   +---IndentationError
+   |   |   |   +---TabError
+   |   +---LookupError
+   |   |   +---IndexError
+   |   |   +---KeyError
+   |   |   +---CodecRegistryError
+   |   +---ValueError
+   |   |   +---UnicodeError
+   |   |   |   +---UnicodeEncodeError
+   |   |   |   +---UnicodeDecodeError
+   |   |   |   +---UnicodeTranslateError
+   |   |   +---UnsupportedOperation
+   |   +---AssertionError
+   |   +---ArithmeticError
+   |   |   +---FloatingPointError
+   |   |   +---OverflowError
+   |   |   +---ZeroDivisionError
+   |   +---SystemError
+   |   |   +---CodecRegistryError
+   |   +---ReferenceError
+   |   +---BufferError
+   |   +---MemoryError
+   |   +---Warning
+   |   |   +---UserWarning
+   |   |   +---DeprecationWarning
+   |   |   +---PendingDeprecationWarning
+   |   |   +---SyntaxWarning
+   |   |   +---RuntimeWarning
+   |   |   +---FutureWarning
+   |   |   +---ImportWarning
+   |   |   +---UnicodeWarning
+   |   |   +---BytesWarning
+   |   |   +---ResourceWarning
+   |   +---error
+   |   +---Verbose
+   |   +---Error
+   |   +---TokenError
+   |   +---StopTokenizing
+   |   +---Empty
+   |   +---Full
+   |   +---_OptionError
+   |   +---TclError
+   |   +---SubprocessError
+   |   |   +---CalledProcessError
+   |   |   +---TimeoutExpired
+   |   +---Error
+   |   |   +---NoSectionError
+   |   |   +---DuplicateSectionError
+   |   |   +---DuplicateOptionError
+   |   |   +---NoOptionError
+   |   |   +---InterpolationError
+   |   |   |   +---InterpolationMissingOptionError
+   |   |   |   +---InterpolationSyntaxError
+   |   |   |   +---InterpolationDepthError
+   |   |   +---ParsingError
+   |   |   |   +---MissingSectionHeaderError
+   |   +---InvalidConfigType
+   |   +---InvalidConfigSet
+   |   +---InvalidFgBg
+   |   +---InvalidTheme
+   |   +---EndOfBlock
+   |   +---BdbQuit
+   |   +---error
+   |   +---_Stop
+   |   +---PickleError
+   |   |   +---PicklingError
+   |   |   +---UnpicklingError
+   |   +---_GiveupOnSendfile
+   |   +---error
+   |   +---LZMAError
+   |   +---RegistryError
+   |   +---ErrorDuringImport
+   +---GeneratorExit
+   +---SystemExit
+   +---KeyboardInterrupt

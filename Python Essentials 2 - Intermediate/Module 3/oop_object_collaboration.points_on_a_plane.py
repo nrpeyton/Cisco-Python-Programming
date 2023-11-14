@@ -32,7 +32,10 @@ class Point:
         return self.__y  # Retrieve y-coordinate of this Point object
 
     def distance_from_xy(self, x, y):
-        return math.hypot(self.__x - x, self.__y - y)  # Compute distance from this Point object to given x, y coordinates
+    # Computes distance from the point represented by this instance (self) to another point specified by (x, y) coordinates.
+    # The first print statement in main uses this to calculate the distance between 'point1' object (self) and 'point2 object'.
+    # The last print statement calculates the distance from 'point2' to arbitrary coordinates (2, 0), independent and seperately of the first print statement.
+        return math.hypot(self.__x - x, self.__y - y)  # Compute distance from own object's point to another point (i.e., point 1 object to point2 object with the first print statement.  And then totally seperately, with the last print statement, calculate distance from point 2 object to the given (arbitrary) x, y coordinates. FOR FUTURE REFERENCE (as this took me a while to figure out): Remember, that with the second last print statement, Self.__x and self.__y are point1, and x and y are point 2.
 
     def distance_from_point(self, point):
         # Compute distance from this Point object to another Point object by using their x, y coordinates
@@ -57,7 +60,7 @@ PERSONAL:
 This was difficult, main takeaways/learnings:
 
 OBJECTS AS ARGUMENTS:
-Ability to pass entire objects as arguments in functions so we can ("get permission" to) access its properties (variables and methods): variables store the object's state while its methods determine what it can do.
+Methods of an object can accept other objects as arguments, allowing for direct interaction —— this enables methods of one instance (SELF) to utilise properties and behaviors of the passed object.
 
 MATHS:
 Combining Pythagorean Theorem with Cartesian Coordinate System: The hypot function calculates the distance between two points on a Cartesian plane (two dimensional space) by treating one point as the origin (0). 
