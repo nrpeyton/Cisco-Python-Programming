@@ -46,7 +46,7 @@ It serves as a personal reference and a working document that evolves with my gr
 
 ## Using This Repository
 
-Feel free to explore the folders and documents. Each section is organized to reflect different aspects of the Python syllabus, from fundamental concepts to more advanced topics.
+Feel free to explore the folders and documents. Each section is organised to reflect different aspects of the Python syllabus, from fundamental concepts to more advanced topics.
 
 ## Contribution
 
