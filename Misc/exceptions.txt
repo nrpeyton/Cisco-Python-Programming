@@ -14,6 +14,7 @@ operation being attempted.  For example, with `i = int("Hello!")` the type is co
 (i.e., a string '123' into an integer), so it expects the string to be formatted as numbers.  The problem is with the contents,
 not the data type.
 
+Attempting to open a file that does not exist causes a FileNotFoundError.                                                                 FileNotFoundError
 
 
 

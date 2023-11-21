@@ -5,7 +5,7 @@ For 'rt': Reads the specified number of characters and returns them as a string.
 In both modes, it can read the entire file if no number is specified.
 Output Format: Bytes object for 'rb', String for 'rt'.
 
-readline(): Reads a single line from the text file, including the existing newline character.
+readline(): Reads a single line from the text file, including (but only up to) the first newline character.
 Output Format: String
 
 readlines(number): Reads the specified number of lines from the text file or all lines if no number is specified. Each line includes the existing newline character.
