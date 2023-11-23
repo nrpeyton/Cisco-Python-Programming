@@ -81,26 +81,17 @@ IndexError
 
 
 
-'''Q6
-Concrete Exceptions:
+''' Q6  what is the output of each?: 
+Q6 Questions:
+a) print(math.floor(-29) + math.trunc(10.6))
+b) print([i for i in range(1, math.ceil(11))])
+c) print([i for i in range(5) if i % 2 == 0 and i % 1 == i])
 
-ValueError
-TypeError
-IndexError
-KeyError
-ImportError
-NameError
-FileNotFoundError
-ZeroDivisionError
-AttributeError
-SyntaxError
 
-Not Concrete:
-
-BaseException
-ArithmeticError
-IO Error
-OS Error
+Q6 Answers:
+a) 
+b) 
+c) 
 
 '''
 
@@ -123,7 +114,7 @@ OS Error
 """
 """
 
-# Answer: 
+# Answer: 1
 
 
 
@@ -173,7 +164,7 @@ s2 = str(i)
 f = float(s2)
 print(s1 == s2)
 
-# Answer: 
+# Answer: ValueError
 
 
 
@@ -250,8 +241,8 @@ __init__.py is an often empty file that indicates to Python that its containing 
 
 '''
 # Answer: 
-__pycache__ is a directory that stores semi-compiled code (bytecode) of modules the first time they're imported so that subsequent runs are faster
-__init__.py is placed in directories of packages (and subpackages) to let Python know they are packages.
+# __pycache__ is a directory that stores semi-compiled code (bytecode) of modules the first time they're imported so that subsequent runs are faster
+# __init__.py is placed in directories of packages (and subpackages) to let Python know they are packages.
 
 
 
@@ -330,10 +321,10 @@ from random import randrange, randint
 4. print(randint(0, 2), '\n')
 
 Answers:
-1. 0
-2. 0
-3. 0, 10, 15
-4. 0, 1, 2
+1. 
+2. 
+3. 
+4. 
 
 
 '''
@@ -415,13 +406,17 @@ math.exp(1)
 
 
 
-# Q33 What is the result of math.floor(-5.1) and math.ceil(-2.5)?
-# Answer: -6.0 and -2.0
+# Q33 What is the result of: a) math.floor(-55.19) and b) math.ceil(-3.7)?
+# Answer:
+# a)
+# b) 
 
 
 
-
-# Q34 What is the result of math.floor(-20.5) and math.ceil(-12.89)?
+# Q34 What is the result of:
+s = '123456789'
+for i in range(len(s)):
+    print(math.floor(int(s[i])) and math.ceil(int(s[i])))
 # Answer: 
 
 
@@ -458,7 +453,8 @@ finally:
     print("the end")
 
 Answer: 
-
+inf
+the end
 '''
 
 
@@ -489,9 +485,7 @@ Define a HuntingBird subclass named ForestHuntingBird, and equip it with an __st
 The new bird's __str__() method should return the string "<species> chirps. Watching for prey. Loves the forest!"
 '''
 # Answer:
-class ForestHuntingBird(HuntingBird):
-    def __str__(self):
-        return super().__str__() + "Loves the forest!"
+
 
 
 
@@ -514,7 +508,7 @@ Choose True or False.
 Write a Python code snippet to concatenate the following two strings with a space between them: "Hello" and "World".  Use a string method.
 
 Answer:
-' '.join(['Hello', 'World'])
+
 
 '''
 
@@ -524,7 +518,7 @@ Answer:
 
 # Q41: What will be the output of the following code?
 s = "abcd"
-print(s[0:4:-1])
+print(s[0:1:-1])
 
 # Answer:
 
@@ -534,6 +528,28 @@ print(s[0:4:-1])
 
 # Q42: Write a snippet to convert "This is a string" to "string a is This"
 '''Answer:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 print(' '.join("This is a string".split()[::-1]))
 
@@ -569,16 +585,15 @@ D) klsef
 '''
 Answer:
 
-Returners: 
-Non-returners: 
+
 '''
 
 
 
 
 
-# Q45: How many arguments does the string class's 'join' method method take?
-# Answer: 
+# Q45: How many arguments does the string class's 'join' method take?
+# Answer: 1
 
 
 
@@ -586,13 +601,25 @@ Non-returners:
 
 
 # Q46: What is the result of math.hypot(7, 0)
-# Answer: 
+# Answer: 7
+
+
+
+
+''' Q47: What is the result of math.hypot(1, 2)
+a) 6.92
+b) 4
+c) 2
+d) 2.23
+'''
+# Answer: 2.23
 
 
 
 
 
-''' Q47: Write three snippets to iterate through the dictionary:
+
+''' Q48: Write three snippets to iterate through the dictionary:
 a) its key-value pairs
 b) only its keys
 c) only its values
@@ -601,8 +628,9 @@ c) only its values
 dic = {1: 'one', 2: 'two', 3: 'three'}
 
 ''' Answer:
-
-
+a) for v in dic.items()
+b) for v in dic.keys()
+c) for v in dic.values()
 
 '''
 
@@ -610,4 +638,51 @@ dic = {1: 'one', 2: 'two', 3: 'three'}
 
 
 
+# Q49: What is the output?
 
+s = '123456'
+even_sum = 0
+odd_product = 1
+
+for i in range(len(s)):
+    num = int(s[i])
+    if i % 2 == 0:
+        even_sum += num
+    else:
+        odd_product *= num
+
+print("Sum of numbers at even indices:", even_sum)
+print("Product of numbers at odd indices:", odd_product)
+
+# Answer:
+# 6
+# 15
+
+
+
+
+
+# Q50: What is the output?
+
+s = '13579'
+total = 0
+
+for i in range(1, len(s)):
+    if i % 2 == 0:
+        total += int(s[i])
+
+print("Total of even-indexed numbers:", total)
+
+# Answer: 
+
+
+
+
+
+# Q51: What is the ouput of this?
+
+lst_obj = (-1, 11, 0)
+lst_obj[0] += 1
+obj = range(1, 11, 0)
+
+# Answer: TypeError - tuple's cannot be modified.  The range's step of zero is invalid too.

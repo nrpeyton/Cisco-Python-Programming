@@ -20,7 +20,7 @@ It serves as a personal reference and a working document that evolves with my gr
 
 ### Python Essentials 1 - Beginner
 - Module 2: Strings, Literals, Operator Priorities, and Expressions
-- Module 3: Lists, [more info to be filled out]
+- Module 3: Lists, 2d Arrays, Loops
 - Module 4: Functions, Recursion, [more info to be filled out]
 
 ### Python Essentials 2 - Intermediate

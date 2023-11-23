@@ -1,23 +1,49 @@
 ISSUE/CAUSE                                                                                                                               ERROR
 -----------                                                                                                                               -----
 
-An AttributeError occurs when trying to access a non-existent property or method of an object (anything following a dot '.').             AttributeError
+An AttributeError occurs when trying to access a non-existent property or method of an object (anything following a dot '.').             AttributeError                   BaseException ← Exception ← AttributeError
 
-NameError is raised when you try to access a local or global name (like a variable, function, or class) that has not been defined.        NameError
+NameError is raised when you try to access a local or global name (like a variable, function, or class) that has not been defined.        NameError                        BaseException ← Exception ← NameError
 
-A TypeError is raised for operations on mismatched data types where the operation doesn't make sense for the data type, (like adding      TypeError
+A TypeError is raised for operations on mismatched data types where the operation doesn't make sense for the data type, (like adding      TypeError                        BaseException ← Exception ← TypeError
 a string to an integer) or when inheritance structures in classes lead to an unclear hierarchy, preventing a consistent method 
 resolution order (MRO).
 
-A ValueError is when the data type is correct, but the content within that data type isn't formatted or isn't appropriate for the         ValueError
+A ValueError is when the data type is correct, but the content within that data type isn't formatted or isn't appropriate for the         ValueError                       BaseException ← Exception ← ValueError
 operation being attempted.  For example, with `i = int("Hello!")` the type is correct because int() can convert other data types
 (i.e., a string '123' into an integer), so it expects the string to be formatted as numbers.  The problem is with the contents,
 not the data type.
 
-Attempting to open a file that does not exist causes a FileNotFoundError.                                                                 FileNotFoundError
+FileNotFoundError: Attempting to open a file that does not exist causes a FileNotFoundError.                                              FileNotFoundError                BaseException ← Exception ← OSError ← FileNotFoundError
+
+IndexError is a concrete exception raised when you try to access a non-existent sequence's element (e.g., a list's element).              IndexError                       BaseException ← Exception ← LookupError ← IndexError
+
+
+ArithmeticError is an abstract exception including all exceptions caused by arithmetic operations like zero division or an                ArithmeticError                  BaseException ← Exception ← ArithmeticError
+argument's invalid domain.
 
 
 
+Concrete Exceptions:
+
+ValueError
+TypeError
+IndexError
+KeyError
+ImportError
+NameError
+FileNotFoundError
+ZeroDivisionError
+AttributeError
+SyntaxError
+
+
+Not Concrete:
+
+BaseException
+ArithmeticError
+IO Error
+OS Error
 
 
 
