@@ -1,17 +1,23 @@
-# List of all questions to be revised:
+# List of all questions to be revised.  Every question is a flavour of one I got wrong, added here each time.
+# One set of '*****' indicates I got the question wrong again a number of days after previously revising it.  Additional sets, wrong again, and so on.
+# All answers are corrected before this document is saved by me.  If any are blank I deleted the answer as extra reminder to re-revise that question.  No answers will be 'left incorrect' before I upload this file to github.
 
-#Q1 You're going to negate the __venomous property of the version_2 object. How will you do this?
+#Q1 You're going to negate the __venomous property of the version_2 object. How will you do this?      *****
 
-class Python:
-    population = 1
-    victims = 0
+class Snake:
+    total_snakes = 1
+    prey_count = 0
+
     def __init__(self):
-        self.length_ft = 3
-        self.__venomous = False
+        self.body_length_ft = 3
+        self.__isvenomous = False
 
-version_2 = Python()
+snake_instance = Snake()
 
-# Answer: version_2._Python__venomous = not version_2._Python__venomous
+
+''' Answer: 
+snake_instance._Snake__isvenomous = not snake_instance._Snake__isvenomous
+'''
 
 
 
@@ -33,18 +39,20 @@ Python string comparison ends at the first difference; the string with the highe
 
 
 
-# Q3 What is the expected output of the following code?
+# Q3 What is the expected output of the following code?      *****
 
+'''
 try:
-    print("5"/0)
+    print("5"/ 0)
 except ArithmeticError:
-    print("arith")
+    print("Arithmetic Error Encountered")
 except ZeroDivisionError:
-    print("zero")
+    print("Division by Zero Error")
 except:
-    print("some")
+    print("General Error")
+'''
 
-# Answer: Prints "some"
+# Answer: General Error
 
 
 
@@ -72,7 +80,7 @@ BaseException
 IndexError
 '''
 
-# Answer: IndexError, ImportError
+# Answer: ImportError and IndexError
 
 
 
@@ -81,18 +89,29 @@ IndexError
 
 
 
-''' Q6  what is the output of each?: 
-Q6 Questions:
+''' Q6  what is the output of a, b, c, d, e, and f?      *****
+
 a) print(math.floor(-29) + math.trunc(10.6))
 b) print([i for i in range(1, math.ceil(11))])
 c) print([i for i in range(5) if i % 2 == 0 and i % 1 == i])
 
+d) print(5 is 5.0)
+e) print(5 == 5.0)
+f) print(5 is 5)
+
+g) What data type is returned by math.floor(), math.ceil() and math.trunc() ?
+
 
 Q6 Answers:
-a) 
-b) 
-c) 
+a) -19
+b) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+c) []
 
+d) False
+e) True
+f) True
+
+g) int
 '''
 
 
@@ -104,7 +123,6 @@ c)
 # Q7 What is BOM?
 
 # Answer: Byte Order Mark
-
 
 
 
@@ -126,7 +144,7 @@ s = 'It is either easy or impossible'
 s = s.replace('easy', 'hard').replace('im', '')
 print(s)
 
-# Answer: It is either hard or possible.
+# Answer: It is either hard or possible
 
 
 
@@ -152,7 +170,7 @@ s2 = s1.split()
 s3 = sorted(s2)
 print(s3[1])
 
-# Answer: 'are'
+# Answer: are
 
 
 
@@ -164,7 +182,7 @@ s2 = str(i)
 f = float(s2)
 print(s1 == s2)
 
-# Answer: ValueError
+# Answer: False
 
 
 
@@ -181,7 +199,7 @@ result = math.e == math.exp(1)
 
 # Q14 (Complete the sentence) Setting the generator's seed with the same value each time your program is run guarantees that...
 
-# Answer: You'll get the same output.
+# Answer: the same result will be generated.
 
 
 
@@ -189,7 +207,7 @@ result = math.e == math.exp(1)
 
 # Q15 Which of the platform module's functions will you use to determine the name of the CPU running inside your computer?
 
-# Answer: platform.processor()
+# Answer: platform.processor
 
 
 
@@ -215,20 +233,21 @@ if __name__ == '__main__':
 
 
 
+
 # Q17 Some additional and necessary packages are stored inside the D:\Python\Project\Modules directory. Write a code ensuring that the directory is traversed by Python in order to find all requested modules.
 
 # Answer: 
 import sys
-sys.path.append('D:\\Python\\Project\\Modules')
+sys.path.append('D:/Python/Project/Modules') or sys.path.append('D:\\Python\\Project\\Modules')
 
 
 
 
-# Q18 The directory mentioned in the previous exercise contains a sub-tree of the following structure: abc/def/mymodule.py.  
+# Q18 The directory mentioned in the previous exercise contains a sub-tree of the following structure: abc/def/mymodule.py.        *****        *****
 # Assuming that D:\Python\Project\Modules has been successfully appended to the sys.path list, write an import directive letting you use all the mymodule entities.
 
-# Answer: 
-import abc.def.mymodule
+# Answer: from abc.def import mymodule
+
 
 
 
@@ -241,8 +260,8 @@ __init__.py is an often empty file that indicates to Python that its containing 
 
 '''
 # Answer: 
-# __pycache__ is a directory that stores semi-compiled code (bytecode) of modules the first time they're imported so that subsequent runs are faster
-# __init__.py is placed in directories of packages (and subpackages) to let Python know they are packages.
+# __pycache__ On the first import of a module, Python compiles the code into bytecode to make future executions more efficient.  The bytecode is stored on __pycache__
+# __init__.py In older Python versions an empty file called __init__.py was used to declare a directory as a container for package or subpackage.  This is now only a convention.
 
 
 
@@ -296,7 +315,7 @@ Q23:  What is true about the pip search command? (Select three answers)
 
 
 
-'''
+'''      *****
 Q24:   During the first import of a module, Python deploys the pyc files in which of the below directories?
 (Note: Although bytecode (pyc files) are created on a script's first execution, they aren't necessarily stored in the __pycache__ folder).
 
@@ -306,7 +325,7 @@ Q24:   During the first import of a module, Python deploys the pyc files in whic
 4. __init__
 '''
 
-# Answer: 1
+# Answer: __pycache__
 
 
 
@@ -321,10 +340,10 @@ from random import randrange, randint
 4. print(randint(0, 2), '\n')
 
 Answers:
-1. 
-2. 
-3. 
-4. 
+1. 0
+2. 0
+3. 0, 5, 10, 15
+4. 0, 1, 2
 
 
 '''
@@ -359,7 +378,7 @@ Q27:   Choose the true statements. (Select two answers)
 3. The version function from the platform module returns a string with your OS version
 4. The system function from the platform module returns a string with your OS name
 '''
-# Answer: 3, 4
+# Answer: 3 and 4
 
 
 
@@ -390,7 +409,7 @@ Q28:   When a module is imported, its contents:
 
 
 # Q31 What is the output of a) math.ceil(2.5) and b) math.floor(2.5)?
-# Answer: a) 3.0 b) 2.0
+# Answer: a) 3  b) 2
 
 
 
@@ -408,17 +427,28 @@ math.exp(1)
 
 # Q33 What is the result of: a) math.floor(-55.19) and b) math.ceil(-3.7)?
 # Answer:
-# a)
-# b) 
+# a) -56
+# b) -3
 
 
 
-# Q34 What is the result of:
+# Q34 What is the result of:      *****      *****
 s = '123456789'
 for i in range(len(s)):
     print(math.floor(int(s[i])) and math.ceil(int(s[i])))
-# Answer: 
 
+''' Answer:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+'''
 
 
 
@@ -455,6 +485,7 @@ finally:
 Answer: 
 inf
 the end
+
 '''
 
 
@@ -484,7 +515,10 @@ Your Task:
 Define a HuntingBird subclass named ForestHuntingBird, and equip it with an __str__() method overriding an inherited method of the same name. 
 The new bird's __str__() method should return the string "<species> chirps. Watching for prey. Loves the forest!"
 '''
-# Answer:
+# Answer: 
+class ForesteHuntingBird(HuntingBird):
+    def __str__(self):
+        return super().__str__() + 'Loves the forest!'
 
 
 
@@ -504,10 +538,12 @@ Choose True or False.
 
 
 
-''' Q40:
-Write a Python code snippet to concatenate the following two strings with a space between them: "Hello" and "World".  Use a string method.
+''' Q40:      *****
+Write a Python code snippet to concatenate the following two strings with a space between them: "Greetings" and "Everyone".  Use a string method.
 
 Answer:
+
+' '.join(['Greetings', 'Everyone'])
 
 
 '''
@@ -520,18 +556,22 @@ Answer:
 s = "abcd"
 print(s[0:1:-1])
 
-# Answer:
+# Answer: No output
 
 
 
 
 
-# Q42: Write a snippet to convert "This is a string" to "string a is This"
+# Q42: Write a Python snippet to reverse the word order in the sentence 'Exploration ignites curiosity'.      *****
 '''Answer:
 
+lst = "Exploration ignites curiosity".split()
+lst.reverse()
+str = ' '.join(lst)
 
+# or:
 
-
+print(' '.join("Exploration ignites curiosity.split()[::-1]))
 
 
 
@@ -574,7 +614,7 @@ B) Coffee is black
 C) Ca  fc
 D) klsef
 '''
-# Answer: D
+# Answer: klsef
 
 
 
@@ -584,17 +624,30 @@ D) klsef
 
 '''
 Answer:
+copy
+count
+pop
+index
 
+insert
+append
+extend
+
+sort
+reverse
+
+remove
+clear
 
 '''
 # Q44 b): Which string methods don't return a value?
-# Answer: 
+# Answer: None of them.  All string methods DO return a value.
 
 
 
 
-# Q45: How many arguments does the string class's 'join' method take?
-# Answer: 1
+# Q45: How many arguments does the string class's 'join' method take?  And what data type does it take?       *****
+# Answer: 1 argument.  It takes an iterable.
 
 
 
@@ -629,8 +682,8 @@ c) only its values
 dic = {1: 'one', 2: 'two', 3: 'three'}
 
 ''' Answer:
-a) for v in dic.items()
-b) for v in dic.keys()
+a) for i in dic.items()
+b) for k in dic.keys()
 c) for v in dic.values()
 
 '''
@@ -639,7 +692,7 @@ c) for v in dic.values()
 
 
 
-# Q49: What is the output?
+# Q49: What is the output?      *****      *****
 
 s = '123456'
 even_sum = 0
@@ -655,9 +708,10 @@ for i in range(len(s)):
 print("Sum of numbers at even indices:", even_sum)
 print("Product of numbers at odd indices:", odd_product)
 
-# Answer:
-# 6
-# 15
+''' Answer:
+9
+48
+'''
 
 
 
@@ -674,7 +728,7 @@ for i in range(1, len(s)):
 
 print("Total of even-indexed numbers:", total)
 
-# Answer: 
+# Answer: 14
 
 
 
@@ -686,4 +740,291 @@ lst_obj = (-1, 11, 0)
 lst_obj[0] += 1
 obj = range(1, 11, 0)
 
-# Answer: TypeError - tuple's cannot be modified.  The range's step of zero is invalid too.
+# Answer: TypeError
+
+
+
+
+
+# Q52 a) [Improving speed of mental arithmetic]: What is the first and last number printed from each of the following snippets?:
+
+s = '0'
+for i in range(len(s)):
+    print(s[i], end='')
+# Answer: 0
+
+s = '01'
+for i in range(len(s)):
+    print(s[i], end='')
+# Answer: 01
+
+s = 'AB'
+for i in range(len(s)):
+    print(s[i], end='')
+# Answer: AB
+
+s = '0123'
+for i in range(len(s)):
+    print(s[i], end='')
+# Answer: 0 to 3
+
+s = '456789'
+for i in range(len(s)):
+    print(s[i], end='')
+# Answer: 4 to 9
+
+s = '123456789'
+for i in range(len(s)):
+    print(s[i], end='')
+# Answer: 1 to 9
+
+s = '23456789'
+for i in range(len(s)):
+    print(s[i], end='')
+# Answer: 2 to 9
+
+s = '67890'
+for i in range(len(s)):
+    print(s[i], end='')
+# Answer: 6 to 0
+
+s = '01234567890123456789'
+for i in range(len(s)):
+    print(s[i], end='')
+# Answer: 0 to 9
+
+s = 'g8 49g'
+for i in range(len(s)):
+    print(s[i], end='')
+# Answer: g8 49g
+
+# Q52 b) What do all these answers have in common?
+# Answer: When iterating over an iterable's length with range in a loop, if the operations within the loop don't modify the elements or their order, the output always mirrors the original iterable.
+
+# # Q52 c) What is: 1 % 2, 0 % 1, 2 % 1 ?
+# Answer: 1, 0, 0
+
+# Q52 d) Answer the below snippets:
+
+s = '0'
+sum1 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+print(sum1)
+# Answer: 0
+
+
+s = '01'
+sum1 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+print(sum1)
+# Answer: 0
+
+
+s = '0123'
+sum1 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+print(sum1)
+# Answer: 2
+
+
+s = '234'
+sum1 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+print(sum1)
+# Answer: 6
+
+
+s = '234567'
+sum1 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+print(sum1)
+# Answer: 12
+
+
+s = '013456'
+sum1 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+print(sum1)
+# Answer: 8
+
+
+s = '2345678901'
+sum1 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+print(sum1)
+# Answer: 20
+
+
+s = '12345'
+sum1 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+print(sum1)
+# Answer: 20
+
+
+
+s = '3456789'
+sum1 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+print(sum1)
+# Answer: 20
+
+
+
+
+
+# Q52 e) Answer the below snippets:
+
+s = '0'
+sum1 = 0
+sum2 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+    else:
+        sum2 += x
+print(sum1)
+print(sum2)
+# Answer: 0
+
+
+s = '01'
+sum = 0
+sum1 = 0
+sum2 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+    else:
+        sum2 += x
+print(sum1)
+print(sum2)
+# Answer: 0, 1
+
+
+s = '0123'
+sum1 = 0
+sum2 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+    else:
+        sum2 += x
+print(sum1)
+print(sum2)
+# Answer: 2, 4
+
+
+s = '234'
+sum1 = 0
+sum2 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+    else:
+        sum2 += x
+print(sum1)
+print(sum2)
+# Answer: 6, 3
+
+
+s = '234567'
+sum1 = 0
+sum2 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+    else:
+        sum2 += x
+print(sum1)
+print(sum2)
+# Answer: 12, 15
+
+
+s = '013456'
+sum1 = 0
+sum2 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+    else:
+        sum2 += x
+print(sum1)
+print(sum2)
+# Answer: 8, 11
+
+
+s = '2345678901'
+sum1 = 0
+sum2 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+    else:
+        sum2 += x
+print(sum1)
+print(sum2)
+# Answer: 20, 25
+
+
+s = '12345'
+sum1 = 0
+sum2 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+    else:
+        sum2 += x
+print(sum1)
+print(sum2)
+# Answer: 9, 6
+
+
+
+s = '3456789'
+sum1 = 0
+sum2 = 0
+for i in range(len(s)):
+    x = int(s[i])
+    if i % 2 == 0:
+        sum1 += x
+    else:
+        sum2 += x
+print(sum1)
+print(sum2)
+# Answer: 24, 18
