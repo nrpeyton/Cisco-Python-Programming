@@ -104,3 +104,81 @@ for (pz, ch) in [('calzone', 0), ('margherita', 110), ('mafia', 20)]:
         print(tmce, ':', tmce.cheese)
     except PizzaError as pe:
         print(pe, ':', pe.pizza, pe.args)
+
+
+
+
+
+
+
+
+
+
+
+class InvalidDataError(Exception):
+    def __init__(self, msg, index):
+        self.message = msg
+        self.index = index
+        super().__init__(self.message + str(self.index))
+    
+    
+def check_list(lst):
+    index = 0
+    
+    for elem in lst:
+        try:
+            if isinstance(elem, int) == False and isinstance(elem, float) == False:
+                raise InvalidDataError("Non-numerical element found at index: ", index)
+
+        except InvalidDataError as e:
+            return str(e)
+        index += 1
+    return 'Check okay: all list elements are numerical'
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [1, 2, 3, 4, 'e']
+
+print(check_list(list1))
+print(check_list(list2))
+
+
+
+
+
+
+
+
+
+class CustomError(Exception):
+    def __init__(self, msg, company): # this method is not required ****
+        self.args = (msg, company)
+        
+
+company_annual_sales = {'Meta': 5000, 'Google': 10000, 'OpenAI': 1000, 'Tesla': 2000}
+
+def update_company_sales(company, sales):
+    if company in company_annual_sales.keys():
+        company_annual_sales[company] = sales
+    elif company not in company_annual_sales.keys():
+        raise CustomError('Unknown Company Error: ', company)
+
+
+
+try:
+    company = input('Enter Company Name: ')
+    annual_sales = int(input("Enter Company's Annual Sales: "))
+    update_company_sales(company, annual_sales)
+except ValueError as ve:
+    print(ve)
+except CustomError as ce: # Remember 'ce' (aka 'e') is an alias of the instance of the CustomError class.  
+    print(ce.args[0], ce.args[1]) # We can still access e.args ('ce'.args here) because we've overriden the built-in Exception class's constructor and created our own 'args' tuple.
+
+print(company_annual_sales)
+
+"""
+REMEMBER:
+**** The 'args' tuple is a property of the built-in Exception class's constructor method. So it's ONLY updated with arguments passed to the built-in 
+Exception's constructor.  Since we are overriding the built-in Exception class's constructor with our own class's constructor and 'args' tuple, we 
+are still able to access an e.args tuple. If our custom __init__ method on lines 2/3 were remeoved and replaced only with 'pass', this would have no 
+affect on the program because CustomError would start inheriting the built-in Exception class's constructor.
+"""

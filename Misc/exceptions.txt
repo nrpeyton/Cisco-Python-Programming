@@ -42,7 +42,7 @@ Not Concrete:
 
 BaseException
 ArithmeticError
-IO Error
+IO Error (was merged into OS Error with 3.3)
 OS Error
 
 

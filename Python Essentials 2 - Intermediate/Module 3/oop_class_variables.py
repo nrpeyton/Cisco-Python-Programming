@@ -18,3 +18,5 @@ print(example_object_3.__dict__,                     example_object_3.counter)
 * each instance attribute requires its own memory location
 ** a class attribute is only stored once
 '''
+
+print(example_object_1._ExampleClass__first)

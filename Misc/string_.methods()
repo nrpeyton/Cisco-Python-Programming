@@ -3,12 +3,12 @@
 capitalize() – sets a string to sentence case (capital first letter only);
 center() – centers the string inside the field of a known length;
 count() – counts the occurrences of a given character;
-find() - finds a substring returning its index within [start:end] following slice notation (start inclusive, end exclusive);    string.find('text', start, end)
+find() - finds a substring returning its index; (start inclusive, end exclusive);    string.find('text', start, end)
 join() – joins all items of a tuple/list into one string (the invoked string acts as item seperator);
 lower() – converts all the string's letters into lower-case letters;
 lstrip() – removes the white characters from the beginning of the string (or specified adjacent characters);
 replace() – replaces a given substring with another;
-rfind() – Return the highest index where substring is found in [start:end] following slice notation (start inclusive, end exclusive);
+rfind() – Return the HIGHEST INDEX where substring is found; (start inclusive, end exclusive);
 rstrip() – removes the trailing white spaces from the end of the string (or specified adjacent characters);
 split() – splits the string into a substring list using a given delimiter;
 strip() – removes the leading and trailing white spaces (or specified adjacent characters);

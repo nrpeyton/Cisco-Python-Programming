@@ -1,5 +1,5 @@
 isinstance(object, type) # checks if object is an instance of type or a subclass thereof. Returns True or False.
-
+isinstance(object, classinfo) # arg 2 must be a type, a tuple of types, or a union.
 '''
 object: The instance to check.
 type: The type to check against (or a tuple of types to check against).

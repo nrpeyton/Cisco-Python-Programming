@@ -1,16 +1,20 @@
 Bitwise OR (|)
-Returns 1 if either bit is 1 or both are 1.
+Returns 1 if either bit is 1 or both are 1.              Even n | 1, just add 1;  Odd n | 1, stays the same.  SETS LEAST SIGNIFICANT BIT!
 
 Bitwise AND (&)
-Returns 1 only if both bits are 1.
+Returns 1 only if both bits are 1.                       Even n & 1, becomes 0;  Odd n & 1, becomes 1.    CHECKS IF ITS ODD!
 
 Bitwise XOR (^)
-Returns 1 if exactly one of the bits is 1, but not both. (Exclusive OR)
+Returns 1 if exactly one of the bits is 1, but not both. (Exclusive OR)         Even n ^ 1, just add 1;  Odd n ^ 1, minus 1.    FLIPS LEAST SIGNIFICANT BIT!
 
-Bitwise NOT (~)
-Equivalent to - (x + 1).
+Bitwise NOT (~)         NEGATES IT MINUS AN EXTRA 1!
+n = -n - 1
 
+Bitwise n << 1       n = n * 2
 
+Bitwise n >> 1       n = n / 2
+
+Bitwise 
 Quick Examples:
 
 3 | 2 = 3

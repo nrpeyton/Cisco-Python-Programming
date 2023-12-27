@@ -11,8 +11,32 @@ insert() – Adds an element at the specified position
 append() – Adds an element at the end of the list                                                   
 extend() – Add the elements of a list (or any iterable), to the end of the current list             
 
-sort() – Sorts the list                                                                             
+sort() – Sorts the list in-place.                                                                            
 reverse() – Reverses the order of the list                                                          
 
 remove() – Removes the first item with the specified value                                           
 clear() – Removes all the elements from the list                                                    
+
+
+
+
+
+
+DICTIONARY METHODS
+------------------
+
+copy()	Returns a copy of the dictionary
+
+keys()	Returns a list containing the dictionary's keys
+fromkeys()	Returns a dictionary with the specified keys and value
+get()	Returns the value of the specified key
+items()	Returns a list containing a tuple for each key value pair
+
+values()	Returns a list of all the values in the dictionary
+setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+
+update()	Updates the dictionary with the specified key-value pairs
+
+pop()	Removes the element with the specified key
+popitem()	Removes the last inserted key-value pair
+clear()	Removes all the elements from the dictionary
