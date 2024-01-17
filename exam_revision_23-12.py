@@ -1,3 +1,5 @@
+# type: ignore # pylint: disable=all
+
 # List of all questions to be revised.  Every question is a flavour of one I got wrong, added here each time.
 # One set of '*****' indicates I got the question wrong again a number of days after previously revising it.  Additional sets, wrong again, and so on.
 # All answers are corrected before this document is saved by me.  If any are blank I deleted the answer as extra reminder to re-revise that question.  No answers will be 'left incorrect' before I upload this file to github.
@@ -105,7 +107,7 @@ g) What data type is returned by math.floor(), math.ceil() and math.trunc() ?
 Q6 Answers:
 a) -19
 b) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-c)                                      mmmmm      mmmmm
+c) [0]                                     mmmmm      mmmmm      mmmmm
 
 d) False
 e) True
@@ -163,14 +165,27 @@ print(s)
 
 
 
-# Q11 What is the expected output of the following code?
 
+
+
+# Q11 What is the expected output of the following snippets?
+
+# A) 
 s1 = 'Where are the snows of yesteryear?'
 s2 = s1.split()
 s3 = sorted(s2)
 print(s3[1])
 
-# Answer: are
+# Answer: 
+
+
+# B)                                                                            nnnnn
+x = '\t\\'*2 + '\t'
+print(len(x.split('t')))
+
+# Answer: 
+
+
 
 
 
@@ -182,7 +197,7 @@ s2 = str(i)
 f = float(s2)
 print(s1 == s2)
 
-# Answer: 
+# Answer: Value Error
 
 
 
@@ -335,10 +350,10 @@ Q24:   During the first import of a module, Python deploys the pyc files in whic
 '''Q25 For each print statement, what are the possible outputs?
 from random import randrange, randint
 
-1. print(randrange(1), end= ' ')
-2. print(randrange(0, 1), end= ' ' )
-3. print(randrange(0, 20, 5), end= ' ')
-4. print(randint(0, 2), '\n')
+print(randrange(1), end= ' ')
+print(randrange(0, 1), end= ' ' )
+print(randrange(0, 20, 5), end= ' ')
+print(randint(0, 2), '\n')
 
 Answers:
 1. 0
@@ -354,21 +369,23 @@ Answers:
 
 
 
+'''                                                                                                            mmmmm
+Q26:
+A) What apt command removes installed software? And what pip command removes an installed package?
+# Answer: sudo apt remove name, pip uninstall name
+
+B) What is the pip command to view all installed packages?
+# Answer: pip list
+
+C) What is the pip command to view a package's dependencies?
+# Answer: pip show name
+
+D) What is the pip command to search for packages?
+# Answer: pip search name (no longer works)
+
+E) What is the pip command to update a package?
+# Answer: pip install -u name
 '''
-Q26:  
-A) How to use pip to remove an installed package?
-1. pip remove package
-2. pip --uninstall package
-3. pip uninstall package
-4. pip install --uninstall package
-
-B) What is the command to a) i) view all installed packages? ii) view a package's dependencies? iii) search for packages?
-
-Answers: 
-A) 3. pip uninstall package
-B) pip list
-'''
-
 
 
 '''
@@ -436,15 +453,12 @@ math.exp(1)
 
 
 
-# Q34 What is the result of:      *****      *****      mmmmm
+# Q34 What is the result of:      *****      *****      mmmmm      mmmmm
 s = '123456789'
 for i in range(len(s)):
     print(math.floor(int(s[i])) and math.ceil(int(s[i])))
 
 ''' Answer:
-
-
-
 
 '''
 
@@ -481,7 +495,8 @@ finally:
     print("the end")
 
 Answer: 
-
+inf
+the end
 
 '''
 
@@ -549,22 +564,45 @@ Answer:
 
 
 
-# Q41: a)What will be the output of the following code?     mmmmm
-s = "abcd"
+# Q41: a)What will be the output of the following code?     mmmmm     mmmmm
+s = 'abcd'
 print(s[0:1:-1])
 
 # Answer: 
 
 
 
-# Q41: b)What will be the output of the following code?     mmmmm
-s = "abcde"
-print(s[4:0:-1])
+# Q41: b)What will be the output of the following code?     mmmmm     mmmmm                        Remember to ACTUALLY step backwards when counting!
+s = "abcd"
+print(s[0:4:-1])
 
 # Answer: 
 
 
 
+# Q41: c)What will be the output of the following code?     mmmmm     mmmmm
+s = 'abcde'
+print(s[2:4:-1])
+
+# Answer: 
+
+
+
+
+# Q41: d)What will be the output of the following code?     mmmmm     mmmmm
+s = "abcd"
+print(s[2:0:-1])
+
+# Answer: 
+
+
+
+
+# Q41: e)What will be the output of the following code?     mmmmm     mmmmm
+s = "abcd"
+print(s[-2:-3:-1])
+
+# Answer: 
 
 
 
@@ -709,14 +747,525 @@ c) for v in dic.values()
 
 
 
+# Q49: What is the ouput of this?               mmmmm
+
+lst_obj = (-1, 11, 0)
+lst_obj[0] += 1
+obj = range(1, 11, 0)
+
+# Answer: 
 
 
-# Q49: Without worrying about missing characters or duplicate characters, what will be the likely range of the first element and last element?          mmmmm
+
+
+
+
+
+# Q50: Without worrying about missing characters or duplicate characters, what will be the likely range of the first element and last element?          mmmmm
 # An approximate range can be a-c or y-z.
 lst = [chr(randint(ord('a'), ord('z'))) for i in range(25)]
 sorted(lst)
 print(lst)
+
+
 # Answer: 
+
+
+
+
+
+
+
+# Q51: What is the output?      nnnnn
+def fun(n):
+    return -n
+
+n = -10
+print(fun(n))
+
+
+# Answer: 
+
+
+
+
+
+# Q52: What is the output of snippets A and B?
+
+# A)                                                                    nnnnn
+for i in range(3):
+    print("Apple:", i)
+    if i == 1:
+        break
+else:
+    print("Orange")
+
+print("-----")
+
+
+
+""" Answer:
+
+"""
+
+
+
+
+# B)                                                                    nnnnn
+j = 0
+while j < 3:
+    print("Mango:", j)
+    j += 1
+else:
+    print("Watermelon")
+
+
+
+""" Answer:
+Mango 0
+Mango 1
+Mango 2
+Watermelon
+"""
+
+
+
+
+
+
+
+# Q53: a) Why is a's assignment line not erroneous?  And which list's elements are mapped to 'x'?          nnnnn
+list1 = ['a', 'b', 'c', 'd', 'e']
+list2 = ['z', 'a', 'b']
+
+def fun(x):
+    return x in list1
+a = list(filter(fun, list2))
+print(a)
+
+# Answer: In the assignment, 'fun' is a reference to the 'fun' function.  Filter calls fun(x) with list2 mapped to 'x'. Filter only returns the true results.
+
+
+# Q53: b) Keeping only the first two lines and the last line from the snippet above, convert the rest of the snippet to its lambda equivalent.
+
+""" Answer: 
+a = list(filter(lambda x: x in list1, list2))
+"""
+
+
+
+
+
+
+# Q54: a) What is the output?   b) Name three other types with similar behavior; what do they all have in common?                nnnnn          nnnnn
+class Feline:
+    def __init__(self, f=1):
+        self.f = +f
+    def reset(self, f=2):
+        self.f += f
+        return self.f
+ 
+cat1 = Feline(2)
+cat2 = Feline(3)
+cat1 = cat2
+cat2.reset()
+print(cat1.f)
+
+
+
+# Q54 a) Answer: 
+# Q54 b) Answer: lists, dictionaries and byte arrays.
+
+
+
+
+
+
+# Q55: What is the output?          nnnnn
+
+l={}
+for i in 'Skywalker':
+    if i in 'Vader':
+        l[ord(i)]=i
+else:
+    l[ord('d')]='d' 
+    
+for j in l.keys():
+    print(l[j], end=' ')
+
+# Answer: a e r d
+
+
+
+
+
+
+
+# Q56: What is the expected output of the following snippet ?               nnnnn
+
+x = 5//2
+func = lambda x:+3
+print(func(x))
+
+
+
+# Answer: 3
+
+
+
+
+
+
+
+# Q57: What is the expected output of the following snippet ?
+
+my_list = list('yoDA')
+print(''.join(my_list).capitalize())
+
+
+# Answer: Yoda
+
+
+
+
+
+
+# Q58 a): What are the four types below (answer in the order they appear)?              nnnnn
+import datetime
+
+print(datetime.datetime.now())
+
+# Answer: module, module, class, function
+
+
+
+# Q58 b): What are the four types below (answer in the order they appear)?              nnnnn
+from datetime import datetime
+
+print(datetime.now())
+
+# Answer: module class class function
+
+
+
+
+
+
+# Q59: What is the output?                                  nnnnn
+
+list_1 = list('Chewie')
+list_2 = list('Han')
+list_3 = list('Luke')
+    
+try:
+    list_1=list_2
+    list_2.insert(0,list_3[0])
+    assert list_1[0] == 'H'
+except:
+    print('Error')
+else:
+    print('OK')
+finally:
+    print('Done')
+
+# Answer: 
+Error
+Done
+
+
+
+
+
+
+# Q60: What is the output?                                  nnnnn
+
+new_list = ['banana', 'tiger', '789Xy', 'Chess']
+my_list.sort(key = lambda x: x[::-1])
+print(my_list[0]) 
+
+# Answer: 
+
+
+
+
+
+# Q61: What's the output?
+
+class A:
+    def __init__(self, x=5):
+        self.x = x
+    
+class B(A):
+    def __init__(self, y=2):
+        super().__init__(y) 
+    def set(self, y):
+        self.x = y + 3
+        return self.x
+    
+b = B()
+print(b.set(b.x + 2))
+
+# Answer: 7
+
+
+
+
+
+
+# Q62: Whats the difference between regular and namespace packages in the context of __init__.py
+
+# Answer: If we spread modules and subpackages across several sub-directories contained in a parent directory, this "root" directory previously required an
+# __init__.py file before Python would recognise it as a package.  Since Python 3.3, an __init__.py file is no longer required.  Python
+# can now (implicitly) treat this folder as a new 'namespace' package .  The only difference between namespace packages and regular packages is
+# the existance of the __init__.py file. This means we can now use regular OS directories (folders) as packages.  The __init__.py file can still be
+# useful for setting up more specific environments or even simplifying imports.  Packages continuing to use an __init__.py file are (still) known as 'regular' 
+# packages.  This may be counter-intuative for someone new to Python because they can work with packages without ever encountering an __init__.py file.
+
+
+
+
+
+
+# Q63: A) What is the output?    B) Can class variables be accessed by instances of those classes?  C) What about class an instance __dict__ ?  D) Provide a reason for the answer to 'B'           nnnnn
+
+class Omega:
+    A= True
+    def __init__(self, x, y):
+        self.a = x
+        self.__b = y
+    def set(self, z):
+        Omega.A = z
+ 
+omega= Omega(5, 3)
+beta = Omega(10, 5)
+omega.__d = True
+beta.set(5)
+print(omega.__dict__)
+print(omega.A)
+print(beta.A)
+
+""" Answers:
+A) 
+
+
+
+B) 
+C) 
+D)
+"""
+
+
+
+
+
+
+# Q64: A) What is the output?  B) What would happen if we removed the '+' from the open flag?                nnnnn
+
+L = [f"{x}\n" for x in range(5, 15)]
+f = open("modifiedfile.txt", "a+")
+f.writelines(L)
+f.seek(0)
+print(f.read())
+f.close()
+
+# A) Answer: 
+# B) Answer: 
+
+
+
+
+
+
+
+
+# Q65: Can the list [5, 6, 8, 2, 4, 3, 10, 7, 9, 3] be generated by the line below?  Provide a reason.
+
+x=sample([i for i in range(1,11)], 10)
+
+# Answer: 
+
+
+
+
+
+
+
+# Q66 A): Which of the code snippets below can be used to obtain ['Spain','Brazil'] from nations?
+
+nations = ['Spain','UK£','Germany!','France3','Brazil']
+
+ 
+extracted = list(map(lambda x: x.isalnum(), nations))  
+print(extracted)
+ 
+extracted = list(filter(lambda x: x[-1].isalpha(), nations))
+print(extracted)
+ 
+extracted = list(map(lambda x: x.isalpha(), nations))
+print(extracted)
+ 
+extracted = list(filter(lambda x: x[-1].isalnum(), nations))
+print(extracted)
+
+# Answer: 
+
+
+
+# Q66 B): Which character groups exclusively return 'True' for isalnum() ?
+
+# Answer: 
+
+# Q66 C): Which character groups exclusively return 'True' for isalpha() ?
+
+# Answer: 
+
+
+
+
+
+
+
+
+# Q67 A): Consider the following Python code:                                          nnnnn
+
+class Planet:                    # line 1
+    def __init__(self, name):    # line 2
+        self.name = name         # line 3
+                                  # line 4
+class Earth(Planet):             # line 5
+    #insert code here            # line 6
+                                  # line 7
+earth_instance = Earth("Earth")  # line 8
+print(earth_instance)            # line 9
+
+"""
+Task: Which code snippet, when inserted at line 6, will make the above code produce the following output:
+I am Earth, child of Planet
+"""
+
+# Option 1
+def __str__(self):
+    return "I am " + self.__name__ + ", child of " + super(self)
+
+# Option 2
+def __str__(self):
+    return "I am " + self.name + ", child of " + Earth.__bases__[0].__name__
+
+# Option 3
+def __str__(self):
+    return "I am " + self.name + ", child of " + Earth.super().__name__
+
+# Option 4
+def __str__(self):
+    return "I am " + self.name + ", child of " + super().__name__
+
+
+
+# Answer: 
+
+# Q67 B): What does super() return?  Where does Python look for an attribute suffixed to super() ?  And what can/can't __name__ be used on?
+
+# Answers: super().__name__ doesn't work because super() returns a 'proxy' object to access the parent class's methods, not the class itself. Since __name__ is a class attribute, not an object attribute, it can't be accessed through the proxy object returned by super()
+
+
+
+
+
+
+
+# Q68: 
+
+"""
+A) Why can't a class constructor return a value?
+
+# Answer: 
+
+
+B) Why can't a class constructor be invoked directly from inside its class?  Can it be invoked from a subclass?
+
+# Answer: 
+"""
+
+
+
+
+
+
+# Q69: What is the expected output of the following code snippet?                   nnnnn
+
+planet_catalog = {1: 'Mercury', 2: 'Venus', 3: 'Earth', 4: 'Mars'}
+
+try:
+    for planet_index in range(len(planet_catalog)):
+        if not(planet_catalog[planet_index + 1].isalpha()):
+            raise ValueError
+    print("Done")
+except ValueError:
+    print("ValueError")
+except IndexError:
+    print("IndexError")
+except KeyError:
+    print("KeyError")
+
+# Answer: 
+
+
+
+
+
+
+
+# Q70: A) # Is id(str1) != id(str2) True or False?
+str1 = 'Hello'
+str2 = 'Hello'
+
+# Answer: 
+
+
+# Q70: B) Is id(a) == id(b) True or False?
+a = 256
+b = 256
+
+# Answer: 
+
+
+# Q70: C) Is id(x) == id(y) True or False?
+x = 257
+y = 257
+
+
+# Answer: 
+
+# Q70: D) Is id(list1) == id(list2) True or False?
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+
+# Answer: 
+
+
+# Q70: E) Is id(tup1) == id(tup2) True or False?
+tup1 = (1, 2, 3)
+tup2 = (1, 2, 3)
+
+# Answer: 
+
+
+# Q70: F) Is id(s1) == id(s2) True or False?
+s1 = 'Hello, world!'
+s2 = 'Hello, world!'
+
+# Answer: 
+
+
+# Q70: G) Is id(f1) == id(f2) True or False?
+f1 = 1.0
+f2 = 1.0
+
+# Answer: 
+
+
+
+
 
 
 
@@ -747,7 +1296,7 @@ print("Product of numbers at odd indices:", odd_product)
 
 
 
-# Q: What is the output?      mmmmm      
+# Q: What is the output?      mmmmm            mmmmm
 
 s = '13579'
 total = 0
@@ -764,19 +1313,13 @@ print("Total of even-indexed numbers:", total)
 
 
 
-# Q: What is the ouput of this?
 
-lst_obj = (-1, 11, 0)
-lst_obj[0] += 1
-obj = range(1, 11, 0)
-
-# Answer: TypeError
 
 
 
 #  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Q [Improving speed of mental arithmetic]: What is the first and last number printed from each of the following snippets?:
+# Q [Improving speed of mental arithmetic]: What is the   F I R S T   and   L A S T   number printed from each of the following snippets?:
 
 s = '0'
 for i in range(len(s)):
@@ -1016,8 +1559,10 @@ print(sum2)
 
 
 
-# Answer: 0
-
+""" Answer: 
+0
+0
+"""
 
 
 
@@ -1036,7 +1581,10 @@ print(sum2)
 
 
 
-# Answer: 0, 1
+""" Answer: 
+0
+1
+"""
 
 
 
@@ -1405,3 +1953,514 @@ print(nl)
 
 
 # Answer: [1, 9, 25, 49]
+
+
+
+
+
+
+
+#################################################################################################################
+
+
+
+
+
+
+
+# MULTIPLE CHOICE:
+
+list1 = [3, 4]
+list2 = [4, 5, 6]
+
+a = list(filter(lambda x: x in list1, list2))
+print(a)
+
+"""
+A) [3, 4]
+B) [5, 6]
+C) []
+D) [4]
+"""
+
+
+# Answer: D
+
+
+
+
+
+
+list1 = [2, 4, 6]
+list2 = [1, 2, 3, 4]
+
+a = list(filter(lambda x: x in list1, list2))
+print(a)
+
+"""
+A) [2, 4]
+B) [1, 3]
+C) []
+D) [2, 3, 4]
+"""
+
+# Answer:  A) [2, 4]
+
+
+
+
+
+
+
+list1 = [10, 20, 30]
+list2 = [20, 30, 40, 50]
+
+a = list(filter(lambda x: x in list1, list2))
+print(a)
+
+"""
+A) [20, 30, 40]
+B) [20, 30]
+C) []
+D) [10, 20, 30]
+"""
+
+
+# Answer: B) [20, 30]
+
+
+
+
+
+
+list1 = [15, 25]
+list2 = [5, 10, 15, 20, 25, 30]
+
+a = list(filter(lambda x: x in list1, list2))
+print(a)
+
+"""
+A) [15, 25]
+B) [5, 10, 20, 30]
+C) [10, 20, 30]
+D) []
+"""
+
+
+# Answer: A) [15, 25]
+
+
+
+
+
+
+list1 = [1, 2]
+list2 = [1, 2, 3]
+
+a = list(filter(lambda x: x not in list1, list2))
+print(a)
+
+"""
+A) [2, 3]
+B) []
+C) [3]
+D) [1, 2]
+"""
+
+
+# Answer: C) [3]
+
+
+
+
+list1 = [5, 6, 7]
+list2 = [4, 5, 6, 7, 8]
+
+a = list(filter(lambda x: x not in list1, list2))
+print(a)
+
+"""
+A) [5, 6, 7]
+B) [4, 8]
+C) [4, 5, 6, 7, 8]
+D) []
+"""
+
+
+# Answer: B) [4, 8]
+
+
+
+
+
+
+list1 = [2, 3, 5]
+list2 = [1, 2, 3, 4, 5, 6]
+
+a = list(filter(lambda x: x not in list1, list2))
+print(a)
+
+"""
+A) [2, 3, 5]
+B) [1, 4, 6]
+C) [1, 2, 3, 4, 5, 6]
+D) [1, 3, 5]
+"""
+
+
+# Answer: B) [1, 4, 6]
+
+
+
+
+
+
+list1 = [3, 6, 9]
+list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+a = list(filter(lambda x: x not in list1, list2))
+print(a)
+
+"""
+A) [1, 2, 4, 5, 7, 8]
+B) [3, 6, 9]
+C) [1, 2, 3, 4, 5, 6, 7, 8, 9]
+D) []
+"""
+
+
+# Answer: A) [1, 2, 4, 5, 7, 8]
+
+
+
+
+
+
+
+list1 = ['a', 'b']
+list2 = ['b', 'c', 'd']
+
+a = list(filter(lambda x: x in list1, list2))
+print(a)
+
+"""
+A) ['a', 'b']
+B) ['c', 'd']
+C) []
+D) ['b']
+"""
+
+# Answer: D) ['b']
+
+
+
+
+list1 = [7, 'x', 9]
+list2 = ['y', 7, 'z', 'x']
+
+a = list(filter(lambda x: x in list1, list2))
+print('\n', a)
+
+"""
+A) []
+B) ['y', 'z']
+C) [7, 'x']
+D) [7, 'x', 'y', 'z']
+"""
+
+# Answer: C) [7, 'x']
+
+
+
+
+
+list1 = [15, 'apple', 20]
+list2 = ['banana', 20, 'apple', 30]
+
+a = list(filter(lambda x: x in list1, list2))
+print('\n', a)
+
+"""
+A) [15, 'apple', 20]
+B) ['banana', 30]
+C) ['apple', 20]
+D) []
+"""
+
+# Answer: C) ['apple', 20]
+
+
+
+
+
+list1 = [40, 'orange', 50]
+list2 = ['orange', 50, 'lemon', 60]
+
+a = list(filter(lambda x: x in list1, list2))
+print('\n', a)
+
+"""
+A) ['orange', 50]
+B) ['lemon', 60]
+C) []
+D) [40, 'orange', 50]
+"""
+
+# Answer: A) ['orange', 50]
+
+
+
+
+
+list1 = ['cat', 3]
+list2 = [1, 'cat', 4, 'dog']
+
+a = list(filter(lambda x: x not in list1, list2))
+print('\n', a)
+
+"""
+A) [1, 'cat', 4, 'dog']
+B) []
+C) ['cat', 4]
+D) [1, 4, 'dog']
+"""
+
+# Answer: d
+
+
+
+
+
+list1 = [5, 'mouse', 8]
+list2 = [7, 'mouse', 9, 'rat', 8]
+
+a = list(filter(lambda x: x not in list1, list2))
+print('\n', a)
+
+"""
+A) [7, 'mouse', 9, 'rat', 8]
+B) [5, 'mouse', 8]
+C) [7, 9, 'rat']
+D) []
+"""
+
+# Answer: c
+
+
+
+
+
+list1 = [2, 'bird', 'fish']
+list2 = [1, 2, 'cat', 'bird', 6]
+
+a = list(filter(lambda x: x not in list1, list2))
+print('\n', a)
+
+"""
+A) [1, 'cat', 6]
+B) [2, 'bird', 'fish']
+C) [1, 2, 'cat', 'bird', 6]
+D) [2, 'bird']
+"""
+
+# Answer: a
+
+
+
+
+
+list1 = ['frog', 'toad', 9]
+list2 = [1, 2, 'frog', 4, 'lizard', 'toad', 8, 9]
+
+a = list(filter(lambda x: x not in list1, list2))
+print('\n', a)
+
+"""
+A) [1, 2, 4, 'lizard', 8]
+B) ['frog', 'toad', 9]
+C) [1, 2, 'frog', 4, 'lizard', 'toad', 8, 9]
+D) []
+"""
+
+# Answer: a
+
+
+
+
+
+
+
+###################################################################################################
+
+# FILL IN THE BLANKS (COPY/PASTE SOMEWHERE FIRST)
+
+# Challenge 1: Intended Output [0, 0, 0, 1, 1, 1, 2, 2, 2]
+print([_ for _ in range(3) for _ in range(3)])
+
+# Challenge 2: Intended Output [2, 4, 6, 2, 4, 6, 2, 4, 6]
+print([_ for _ in range(3) for _ in range(2, 7, 2)])
+
+# Challenge 3: Intended Output ['A', 'B', 'A', 'B', 'A', 'B']
+print([_ for _ in range(3) for _ in ['A', 'B']])
+
+# Challenge 4: Intended Output [0, 2, 4, 0, 2, 4]
+print([_ for _ in range(2) for _ in range(0, 6, 2)])
+
+# Challenge 5: Intended Output [3, 3, 3, 4, 4, 4, 5, 5, 5]
+print([_ for _ in range(3, 6) for _ in range(3)])
+
+# Challenge 6: Intended Output [1, 3, 5, 1, 3, 5, 1, 3, 5]
+print([_ for _ in range(3) for _ in range(1, 6, 2)])
+
+# Challenge 7: Intended Output [0, 'x', 0, 'x', 0, 'x']
+print([_ for _ in range(3) for _ in [0, 'x']])
+
+# Challenge 8: Intended Output ['a', 'b', 'c', 'a', 'b', 'c']
+print([_ for _ in range(2) for _ in ['a', 'b', 'c']])
+
+# Challenge 9: Intended Output [10, 12, 14, 10, 12, 14, 10, 12, 14]
+print([_ for _ in range(3) for _ in range(10, 15, 2)])
+
+# Challenge 10: Intended Output [1, 3, 1, 3, 1, 3]
+print([_ for _ in range(3) for _ in range(1, 4, 2)])
+
+
+
+
+
+
+
+# Challenge 1: Intended Output [[0, 1, 2], [0, 1, 2], [0, 1, 2]]
+print([[_ for j in range(3)] for _ in range(3)])
+
+# Challenge 2: Intended Output [[2, 2, 2], [4, 4, 4], [6, 6, 6]]
+print([[_ for i in range(3)] for _ in range(2, 7, 2)])
+
+# Challenge 3: Intended Output [['A', 'A', 'A'], ['B', 'B', 'B']]
+print([[_ for _ in range(3)] for _ in ['A', 'B']])
+
+# Challenge 4: Intended Output [[0, 0], [2, 2], [4, 4]]
+print([[_ for i in range(2)] for _ in range(0, 6, 2)])
+
+# Challenge 5: Intended Output [[3, 4, 5], [3, 4, 5], [3, 4, 5]]
+print([[_ for i in range(3, 6)] for _ in range(3)])
+
+# Challenge 6: Intended Output [[1, 1, 1], [3, 3, 3], [5, 5, 5]]
+print([[_ for i in range(3)] for _ in range(1, 6, 2)])
+
+# Challenge 7: Intended Output [[0, 0, 0], ['x', 'x', 'x']]
+print([[_ for i in range(3)] for _ in [0, 'x']])
+
+# Challenge 8: Intended Output [['a', 'a'], ['b', 'b'], ['c', 'c']]
+print([[_ for _ in range(2)] for _ in ['a', 'b', 'c']])
+
+# Challenge 9: Intended Output [[10, 10, 10], [12, 12, 12], [14, 14, 14]]
+print([[_ for i in range(3)] for _ in range(10, 15, 2)])
+
+# Challenge 10: Intended Output [[1, 1, 1], [3, 3, 3]]
+print([[_ for _ in range(3)] for _ in range(1, 4, 2)])
+
+
+
+
+###################################################################################################
+
+
+
+
+# FLAT List Comprehensions with Two Iterators (20 Challenges)
+
+# 1
+print([x + y for x in range(3) for y in range(2)])  # [0, 1, 1, 2, 2, 3]
+# Answer: 
+
+# 2
+print([x * y for x in range(2) for y in range(3)])  # [0, 0, 0, 0, 1, 2]
+# Answer: 
+
+# 3
+print([x - y for x in range(4) for y in range(2)])  # [0, -1, 1, 0, 2, 1, 3, 2]
+# Answer: 
+
+# 4
+print([x for x in range(3) for y in range(2) if x > y])  # [1, 2, 2]
+# Answer: 
+
+# 5
+print([y for x in range(2) for y in range(3) if x < y])  # [1, 2, 2]
+# Answer: 
+
+# 6
+print([x * y for x in range(2) for y in range(2) if x != y])  # [0, 0]
+# Answer: 
+
+# 7
+print([x + y for x in range(2) for y in range(2) if x == y])  # [0, 2]
+# Answer: 
+
+# 8
+print([x - y for x in range(3) for y in range(3) if x >= y])  # [0, 1, 0, 2, 1, 0]
+# Answer: 
+
+# 9
+print([x * y for x in range(2) for y in range(3) if y % 2 == 0])  # [0, 0, 0, 2]
+# Answer: 
+
+# 10
+print([x + y for x in range(3) for y in range(2) if (x + y) % 2 == 0])  # [0, 2, 2]
+# Answer: 
+
+
+
+
+# NESTED List Comprehensions with Two Iterators (20 Challenges)
+
+# 1
+print([[x + y for x in range(2)] for y in range(2)])  # [[0, 1], [1, 2]]
+# Answer: 
+
+# 2
+print([[x * y for x in range(2)] for y in range(3)])  # [[0, 0], [0, 1], [0, 2]]
+# Answer: 
+
+# 3
+print([[x - y for x in range(3)] for y in range(2)])  # [[0, 1, 2], [-1, 0, 1]]
+# Answer: 
+
+# 4
+print([[x for x in range(2) if x > y] for y in range(2)])  # [[1], []]
+# Answer: 
+
+# 5
+print([[y for x in range(2) if x < y] for y in range(3)])  # [[], [1], [2, 2]]
+# Answer: 
+
+# 6
+print([[x * y for x in range(2) if x != y] for y in range(2)])  # [[0], [0]]
+# Answer: 
+
+# 7
+print([[x + y for x in range(2) if x == y] for y in range(2)])  # [[0], [2]]
+# Answer: 
+
+# 8
+print([[x - y for x in range(3) if x >= y] for y in range(3)])  # [[0, 1, 2], [0, 1], [0]]
+# Answer: 
+
+# 9
+print([[x * y for x in range(2) if y % 2 == 0] for y in range(3)])  # [[0, 0], [], [0, 2]]
+# Answer: 
+
+# 10
+print([[x + y for x in range(2) if (x + y) % 2 == 0] for y in range(2)])  # [[0], [2]]
+# Answer: 
+
+
+
+
+
+###################################################################################################
+
+
+
+# practice 2^0, 2^1, 2^2, 2^3, 2^4 and 0^2, 1^2, 2^2, 3^2, 4^2

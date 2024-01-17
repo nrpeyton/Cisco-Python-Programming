@@ -11,7 +11,7 @@ insert() – Adds an element at the specified position
 append() – Adds an element at the end of the list                                                   
 extend() – Add the elements of a list (or any iterable), to the end of the current list             
 
-sort() – Sorts the list in-place.                                                                            
+sort() – Sorts the list in-place.  'key=' maps argument-free function to each list element.          list.sort(reverse=True|False, key=myFunc)        
 reverse() – Reverses the order of the list                                                          
 
 remove() – Removes the first item with the specified value                                           

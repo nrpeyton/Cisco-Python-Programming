@@ -22,6 +22,9 @@ IndexError is a concrete exception raised when you try to access a non-existent 
 ArithmeticError is an abstract exception including all exceptions caused by arithmetic operations like zero division or an                ArithmeticError                  BaseException ← Exception ← ArithmeticError
 argument's invalid domain.
 
+KeyError is a concrete exception raised when there is an attempt to access a collection's non-existent element (for example: a            KeyError                         BaseException ← Exception ← LookupError ← KeyError
+dictionary's element).
+
 
 
 Concrete Exceptions:
@@ -44,6 +47,23 @@ BaseException
 ArithmeticError
 IO Error (was merged into OS Error with 3.3)
 OS Error
+
+
+
+
+ORDER (Specific to More General):
+
+try:
+    # Some code that might raise different types of exceptions
+
+except ValueError as e:
+    print(e)
+except ArithmeticError as e:
+    print(e)
+except Exception as e:
+    print(e)
+
+SYNTAX: Unnamed exception branch MUST be placed last.
 
 
 

@@ -3,13 +3,14 @@
 """REMEMBER: The mode used with the built-in function open() determines the class of the file object. [See open() function](../Functions/open().md) """
 
 #                                                 WRITING (w, a, r+, w+, a+)
-file.write(string): # Takes a string and appends it at the current file position.  Returns the number of bytes/characters written.
+file.write(string) # Takes a string and appends it at the current file position.  Returns the number of bytes/characters written.
 
+file.writelines(lines, /)  # Write a list of lines at the current file position. Newline separators ('\n') are not added.
 
 #                                                 READING (r, r+, w+, a+)
-file.read([size=- 1], /): # Reads entire file or number of characters/bytes from current position, returning empty string at EOF.
+file.read([size=- 1], /)  # Reads entire file or number of characters/bytes from current position, returning empty string at EOF.
 
-file.readline([size=- 1], /): # Returns the next line from the file up to the newline character or size of byteas, whichever is first. 
+file.readline([size=- 1], /)  # Returns the next line from the file up to the newline character or size of byteas, whichever is first. 
                               #If EOF, returns an empty string.
 
 file.readlines(hint=- 1, /): # Returns the next list of lines from the file. If 'hint' bytes (approximate) are read, no further lines are read.

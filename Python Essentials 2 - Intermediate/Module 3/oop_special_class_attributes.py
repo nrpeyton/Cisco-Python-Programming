@@ -66,18 +66,23 @@ Output:
 
 
 # Class.__bases__
-
-class Snakes:
+class Chordata:
     pass
 
-class Python(Snakes):
+class Reptiles(Chordata):
     pass
 
-print(Python.__bases__)  # Output: (<class '__main__.Snakes'>,)
+class Snakes(Reptiles):
+    pass
+
+class Python(Snakes, Reptiles):
+    pass
+
+print(Python.__bases__)  # Output: (<class '__main__.Snakes'>, <class '__main__.Reptiles'>)
 
 '''
 Output:
-- A tuple containing the base classes (superclasses) of the 'Python' class.
+- A tuple containing the direct base classes (direct superclasses) of the 'Python' class.
 - In this case, the 'Python' class inherits from the 'Snakes' class.
 - Outputs as a tuple, even if there is only one base class.
 '''
