@@ -7,7 +7,11 @@ NameError is raised when you try to access a local or global name (like a variab
 
 A TypeError is raised for operations on mismatched data types where the operation doesn't make sense for the data type, (like adding      TypeError                        BaseException ← Exception ← TypeError
 a string to an integer) or when inheritance structures in classes lead to an unclear hierarchy, preventing a consistent method 
-resolution order (MRO).
+resolution order (MRO).  TypeErrors also arise if the number of arguments supplied doesn't match a function's parameter signature.
+
+ModuleNotFoundError is raised if attempting to import a module that cannot be found.  For example, because the sys.path list has          ModuleNotFoundError              BaseException ← Exception ← ImportError ← ModuleNotFoundError
+not been appended, or attempting to use the 'import' keyword on its own without 'from' to import something inside a module.
+
 
 A ValueError is when the data type is correct, but the content within that data type isn't formatted or isn't appropriate for the         ValueError                       BaseException ← Exception ← ValueError
 operation being attempted.  For example, with `i = int("Hello!")` the type is correct because int() can convert other data types
@@ -185,3 +189,39 @@ BaseException
    +---GeneratorExit
    +---SystemExit
    +---KeyboardInterrupt
+
+
+
+
+
+
+
+
+
+EXCEPTION HANDLING DESIGN
+Broad to Specific Handling: Exception handling is structured from more general to more specific to allow a program to respond to errors at 
+varying levels of granularity. A general handler (superclass) deals with a wide range of issues, while more specific handlers (subclasses) 
+address particular problems. This hierarchical handling is intentional and practical, ensuring that errors do not go unaddressed while also 
+allowing for specific responses when needed.
+
+Type Matching Over Attribute Access: When an exception is raised, Python's error handling mechanism looks for a match based on the exception's 
+type, not its attributes or methods. This is fundamentally different from how objects typically interact in OOP, where attributes and methods 
+of an object (and by inheritance, of its subclasses) are crucial to how it behaves or is treated. In exception handling, the focus is on the 
+type of error (i.e., its class) rather than on the properties or behaviors of the error object.
+
+Designed for Error Propagation: Exceptions are designed to propagate up the call stack until they find a matching handler. This design ensures
+that errors are not silently ignored but are either handled explicitly or cause the program to terminate with an error message. The ability 
+of a superclass to catch exceptions from its subclasses facilitates this by providing a "catch-all" mechanism for unhandled specific errors.
+
+CONCEPTUAL SHIFT
+Operational, Not Structural: The operation of catching exceptions in a superclass doesn't rely on inheriting attributes or methods from 
+subclasses (which, as you noted, is not how inheritance works). Instead, it's about structurally placing a safety net for any errors that fall
+within a broad category defined by the superclass. This mechanism is purpose-built for error handling and is structured to maximize code 
+robustness and clarity.
+
+Purposeful Design: This design choice is purposeful, reflecting the need for error handling mechanisms to be both comprehensive and manageable. 
+By allowing superclasses to handle exceptions from their subclasses, Python's design ensures that developers have the flexibility to write 
+error handlers that are as generic or as specific as needed without complicating the inheritance hierarchy.
+
+In summary, while the mechanism of exception handling utilizes the class hierarchy in a way that mirrors inheritance, its logic and purpose are 
+tailored specifically to the needs of error management, rather than reflecting the traditional OOP model of attribute and method inheritance.

@@ -1,4 +1,4 @@
-from os import uname # <--- For Unix.  For windows, use `from platform import uname`
+from os import uname            # For windows, use `from platform import uname`
 
 print(uname())
 

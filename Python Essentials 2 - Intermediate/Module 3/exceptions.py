@@ -13,8 +13,11 @@ except Exception as e: # In Python's exception handling, 'as e' creates a refere
     print(e, e.__str__(), e.args) # Printing 'e' implicitly is the same as invoking e.__str__() explicitly.  And 'args' is just an instance property (a tuple) storing the arguments passed to the exception object's constructor.
     print_args(e.args)
 
+print(e) # <<< ERROR: This last line will raise a NameError because as 'e' is a LOCAL variable (alias) that refers to an instance of the exception class; it only has local variable scope inside the 'except' block it was created.
 
 
+
+# e.__dict__ likely won't show the exception instance's variables such as e.args and e.errno because some exceptions are implemented in C at a deeper level, storing these attributes in C structures rather than the Python object's __dict__.
 
 
 # When creating user defined exceptions, they must be new subclasses derived from predefined ones.  Either closely related, or not.  For a structure not closely related to Python's existing tree, we can choose a top base, like BaseException or Exception.
@@ -182,3 +185,6 @@ Exception's constructor.  Since we are overriding the built-in Exception class's
 are still able to access an e.args tuple. If our custom __init__ method on lines 2/3 were remeoved and replaced only with 'pass', this would have no 
 affect on the program because CustomError would start inheriting the built-in Exception class's constructor.
 """
+
+
+# exception instance alias variables (such as 'e.args' or 'e.errno') are local variables that are only accessible within their except block.

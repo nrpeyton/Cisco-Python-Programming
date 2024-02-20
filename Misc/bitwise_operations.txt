@@ -7,13 +7,15 @@ Returns 1 only if both bits are 1.                       Even n & 1, becomes 0; 
 Bitwise XOR (^)
 Returns 1 if exactly one of the bits is 1, but not both. (Exclusive OR)         Even n ^ 1, just add 1;  Odd n ^ 1, minus 1.    FLIPS LEAST SIGNIFICANT BIT!
 
-Bitwise NOT (~)         NEGATES IT MINUS AN EXTRA 1!
+Bitwise NOT (~)     NEGATE N's SIGN, THEN, N -1
 n = -n - 1          5 becomes -6
 -n = n - 1          -5 becomes 4
 
-Bitwise n << 1       n = n * 2                                                  A left shift (<<) by n bits is equivalent to multiplication by pow(2, n).
+BITWISE N << 1                                                                   BITWISE N << K
+--------------                                                                   --------------
+Bitwise n << 1       x = n * 2                                                   A left shift (<<) by k bits is equivalent to:  n * pow(2, k).
 
-Bitwise n >> 1       n = n / 2                                                  A right shift (>>) by n bits is equivalent to floor division by pow(2, n).
+Bitwise n >> 1       x = n // 2                                                  A right shift (>>) by k bits is equivalent to:  n // pow(2, k).
 
 
 

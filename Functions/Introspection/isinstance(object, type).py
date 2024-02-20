@@ -9,6 +9,7 @@ Examples:
 isinstance(5, int) # True
 isinstance(5.0, float) # True
 isinstance("Hello", str) # True
+print(isinstance(5, (int,float) )) # True     If a tuple is used, 'OR' is applied, not 'AND'.
 
 
 class myObj:

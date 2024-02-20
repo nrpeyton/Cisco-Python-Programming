@@ -1,5 +1,6 @@
 # type: ignore # pylint: disable=all
 """                                               STRING METHODS                                               """
+# NOTE: ALL string methods return something.
 
 str.capitalize() # Return a copy of the string with ONLY its first character capitalised and THE REST LOWERCASED.
 str.title() # makes the first letter in each word upper-case.
@@ -9,6 +10,7 @@ str.swapcase() # swaps the letters' cases.
 
 str.center(width[, fillchar]) # centers the string inside the field of a known length;                                                               
 
+# NOTE: String Methods with Slices: 'start' can be used without 'end' but 'end' cannot be used without 'start'.
 str.count(sub[, start[, end]]) # counts the occurrences of a given character;
 str.find(sub[, start[, end]]) # finds a substring returning its index, or -1 on failure; (start inclusive, end exclusive);    string.find('text', start, end)
 str.rfind(sub[, start[, end]]) # Return the HIGHEST INDEX where the START of the substring is found (from left to right). Returns -1 if failed; (start inclusive, end exclusive);

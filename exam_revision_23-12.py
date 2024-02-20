@@ -61,11 +61,38 @@ except:
 
 
 
-# Q4 The following code does what?
+# Q4 The following one-liners output what?                
 
 print(float("1, 3"))
 
-# Answer: ValueError
+
+
+# Answer: 
+
+
+
+print(float("1,3"))
+
+
+
+# Answer: 
+
+
+
+print(float("1. 3"))
+
+
+
+# Answer: 
+
+
+
+print(float("1.3"))
+
+
+
+# Answer: 
+
 
 
 
@@ -107,7 +134,7 @@ g) What data type is returned by math.floor(), math.ceil() and math.trunc() ?
 Q6 Answers:
 a) -19
 b) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-c) [0]                                     mmmmm      mmmmm      mmmmm
+c)                                      mmmmm      mmmmm      mmmmm
 
 d) False
 e) True
@@ -168,7 +195,7 @@ print(s)
 
 
 
-# Q11 What is the expected output of the following snippets?
+# Q11 What is the expected output of the following snippets?            1-2
 
 # A) 
 s1 = 'Where are the snows of yesteryear?'
@@ -176,29 +203,32 @@ s2 = s1.split()
 s3 = sorted(s2)
 print(s3[1])
 
-# Answer: 
+# Answer: are
 
 
 # B)                                                                            nnnnn
 x = '\t\\'*2 + '\t'
 print(len(x.split('t')))
 
-# Answer: 
+# Answer: 1
 
 
 
 
 
-# Q12What is the expected result of the following code?      mmmmm      mmmmm
+# Q12 A) What is the expected result of the following code?         mmmmm      mmmmm           25-1            19-2
 
-s1 = '12.8'
+s1 = '45.6'
 i = int(s1)
 s2 = str(i)
 f = float(s2)
 print(s1 == s2)
 
-# Answer: Value Error
+# Answer: 
 
+# Q12 B) What if s1 was a float?
+
+# Answer: 
 
 
 
@@ -258,10 +288,10 @@ sys.path.append('D:/Python/Project/Modules') or sys.path.append('D:\\Python\\Pro
 
 
 
-# Q18 The directory mentioned in the previous exercise contains a sub-tree of the following structure: abc/def/mymodule.py.        *****        *****
+# Q18 The directory mentioned in the previous exercise (D:\Python\Project\Modules) contains a sub-tree of the following structure: abc/def/mymodule.py.        *****        *****
 # Assuming that D:\Python\Project\Modules has been successfully appended to the sys.path list, write an import directive letting you use all the mymodule entities.
 
-# Answer: from abc.def import mymodule
+# Answer: from abc.def import mymodule or import abc.def.mymodule
 
 
 
@@ -281,20 +311,11 @@ streamlining/simplifying import statements.
 
 
 
-''' Q20 
-# Explain how to:
-1. Check pip version?
-2. Install pip package?
-3. Install pipo package only for a specific user ?
-'''
-# Answer: 
-1. pip3 --version
-2. pip3 install package_name
-3. pip3 install --user package_name
+
 
 
 '''
-Q21 :  When you use pip to install a package that requires one or more dependencies, then:
+Q20 :  When you use pip to install a package that requires one or more dependencies, then:
 
 -you'll have to install all the dependencies by yourself before you install the desired package
 -pip will take care of everything by itself
@@ -306,20 +327,20 @@ Q21 :  When you use pip to install a package that requires one or more dependenc
 
 
 '''
-Q22:  A list of package's dependencies can be obtained from pip using its command named:
+Q21:  A list of package's dependencies can be obtained from pip using its command named:
 
--dir
--show
--list
--deps
+dir
+show
+list
+deps
 '''
-# Answer: -show
+# Answer: show
 
 
 
 
 '''
-Q23:  What is true about the pip search command? (Select three answers)
+Q22:  What is true about the pip search command? (Select three answers)
 
 1. it needs working Internet connection to work
 2. all its searches are limited to locally installed packages
@@ -332,7 +353,7 @@ Q23:  What is true about the pip search command? (Select three answers)
 
 
 '''      *****
-Q24:   During the first import of a module, Python deploys the pyc files in which of the below directories?
+Q23:   During the first import of a module, Python deploys the pyc files in which of the below directories?
 (Note: Although bytecode (pyc files) are created on a script's first execution, they aren't necessarily stored in the __pycache__ folder).
 
 1. __pycache__
@@ -347,7 +368,7 @@ Q24:   During the first import of a module, Python deploys the pyc files in whic
 
 
 
-'''Q25 For each print statement, what are the possible outputs?
+'''Q24 For each print statement, what are the possible outputs?
 from random import randrange, randint
 
 print(randrange(1), end= ' ')
@@ -369,27 +390,49 @@ Answers:
 
 
 
-'''                                                                                                            mmmmm
-Q26:
+'''                                                                                                            mmmmm            mmmmm           21-1            20-2
+Q25:
 A) What apt command removes installed software? And what pip command removes an installed package?
-# Answer: sudo apt remove name, pip uninstall name
+# Answer: sudo apt remove packagename       pip uninstall packagename
 
 B) What is the pip command to view all installed packages?
 # Answer: pip list
 
 C) What is the pip command to view a package's dependencies?
-# Answer: pip show name
+# Answer: pip show packagename
 
 D) What is the pip command to search for packages?
-# Answer: pip search name (no longer works)
+# Answer: pip search packagename (no longer works)
 
 E) What is the pip command to update a package?
-# Answer: pip install -u name
+# Answer: pip install -U packagename
+
+F) In the command `pip --version`, is 'version' a command or an option?
+# Answer: 'Version' is' a general option of the pip command itself.  The typical usage is `pip <command> [options] <target>`.  But here, pip is the only command, so the --version flag follows directly.
+
+G) What is the pip command if you only wanted to install version 1.0.4 of a package for the current user?
+# Answer: pip install --user 'packagename==1.0.4'
 '''
 
 
+
+''' Q26                                                 mmmmm
+# Explain how to:
+1. Check pip version?
+2. Install pip package?
+3. Install pip package only for the current user ?
 '''
-Q27:   Choose the true statements. (Select two answers)
+# Answer: 
+1. pip --version
+2. pip install packagename
+3. pip install --user packagename
+
+
+
+
+
+'''
+Q27:   a) Choose the true statements. (Select two answers)
 
 1. The version function from the platform module returns a string with your Python version
 2. The processor function from the platform module returns an integer with the number of processes currently running in your OS
@@ -398,8 +441,14 @@ Q27:   Choose the true statements. (Select two answers)
 '''
 # Answer: 3 and 4
 
+"""    b) What is the output?                                                                           21-1 
+"""                                                         
 
+import platform
+print(platform.machine(), platform.processor(), platform.system(), platform.platform(), platform.version())
 
+# Answer: x86 x86 linux linux_kernel_info linux_distro
+# or     x86 x86 windows 'windows 10 [build_info]' build_info
 
 '''
 Q28:   When a module is imported, its contents:
@@ -416,7 +465,7 @@ Q28:   When a module is imported, its contents:
 
 # Q29 What is the output of: factorial(4)
 
-# Answer: 24
+# Answer: 
 
 
 
@@ -459,7 +508,15 @@ for i in range(len(s)):
     print(math.floor(int(s[i])) and math.ceil(int(s[i])))
 
 ''' Answer:
-
+1
+2
+3
+4
+5
+6
+7
+8
+9
 '''
 
 
@@ -568,7 +625,7 @@ Answer:
 s = 'abcd'
 print(s[0:1:-1])
 
-# Answer: 
+# Answer: empty string
 
 
 
@@ -576,7 +633,7 @@ print(s[0:1:-1])
 s = "abcd"
 print(s[0:4:-1])
 
-# Answer: 
+# Answer: empty string
 
 
 
@@ -584,7 +641,7 @@ print(s[0:4:-1])
 s = 'abcde'
 print(s[2:4:-1])
 
-# Answer: 
+# Answer: empty string
 
 
 
@@ -593,7 +650,7 @@ print(s[2:4:-1])
 s = "abcd"
 print(s[2:0:-1])
 
-# Answer: 
+# Answer: cb
 
 
 
@@ -602,7 +659,7 @@ print(s[2:0:-1])
 s = "abcd"
 print(s[-2:-3:-1])
 
-# Answer: 
+# Answer: c
 
 
 
@@ -696,7 +753,7 @@ clear
 
 # Q44 c): Which 'only' iterables can list methods be used on?  How can we extract a substring from a string?        mmmmm
 
-# Answer: 
+# Answer: Lists.  Slices.
 
 
 
@@ -710,8 +767,8 @@ clear
 
 
 
-# Q46: What is the result of math.hypot(7, 0)
-# Answer: 7
+# Q46: What is the result of math.hypot(6, 0)
+# Answer: 6
 
 
 
@@ -753,7 +810,7 @@ lst_obj = (-1, 11, 0)
 lst_obj[0] += 1
 obj = range(1, 11, 0)
 
-# Answer: 
+# Answer: Type Error
 
 
 
@@ -768,7 +825,7 @@ sorted(lst)
 print(lst)
 
 
-# Answer: 
+# Answer: no change, because sorted() returns a value.  The inplace list.sort() method's target is prefixed to it where as the sorted() function's target is its first arg.
 
 
 
@@ -780,11 +837,11 @@ print(lst)
 def fun(n):
     return -n
 
-n = -10
+n = -25
 print(fun(n))
 
 
-# Answer: 
+# Answer: 10
 
 
 
@@ -805,7 +862,9 @@ print("-----")
 
 
 """ Answer:
-
+Apple: 0
+Apple: 1
+-----
 """
 
 
@@ -822,9 +881,9 @@ else:
 
 
 """ Answer:
-Mango 0
-Mango 1
-Mango 2
+Mango: 0
+Mango: 1
+Mango: 2
 Watermelon
 """
 
@@ -838,43 +897,34 @@ Watermelon
 list1 = ['a', 'b', 'c', 'd', 'e']
 list2 = ['z', 'a', 'b']
 
-def fun(x):
-    return x in list1
+def fun(xxyz):
+    return xxyz in list1
 a = list(filter(fun, list2))
 print(a)
 
-# Answer: In the assignment, 'fun' is a reference to the 'fun' function.  Filter calls fun(x) with list2 mapped to 'x'. Filter only returns the true results.
+# Answer: In the assignment, 'fun' is a reference to the 'fun' function.  Filter calls fun(xxyz) with list2 mapped to 'xxyz'. Filter only returns the true results.
 
 
 # Q53: b) Keeping only the first two lines and the last line from the snippet above, convert the rest of the snippet to its lambda equivalent.
 
 """ Answer: 
-a = list(filter(lambda x: x in list1, list2))
+a = list(filter(lambda x: x in list1, list2)) 
 """
 
+# Q53: c) If map() and filter() are multiple choice answers in an exam, how can we quickly eliminate map()?                     21-1
+
+# Answer: map() would result in the same number of elements, filter would filter some out.                                                                                                                                                                 If there is a smaller number of elements in the output list vs the input target.
 
 
 
 
 
-# Q54: a) What is the output?   b) Name three other types with similar behavior; what do they all have in common?                nnnnn          nnnnn
-class Feline:
-    def __init__(self, f=1):
-        self.f = +f
-    def reset(self, f=2):
-        self.f += f
-        return self.f
- 
-cat1 = Feline(2)
-cat2 = Feline(3)
-cat1 = cat2
-cat2.reset()
-print(cat1.f)
+#  Q54: pass
 
 
 
-# Q54 a) Answer: 
-# Q54 b) Answer: lists, dictionaries and byte arrays.
+
+
 
 
 
@@ -883,17 +933,17 @@ print(cat1.f)
 
 # Q55: What is the output?          nnnnn
 
-l={}
-for i in 'Skywalker':
-    if i in 'Vader':
-        l[ord(i)]=i
+elements = {}
+for character in 'Gandalf':
+    if character in 'Saruman':
+        elements[ord(character)] = character
 else:
-    l[ord('d')]='d' 
-    
-for j in l.keys():
-    print(l[j], end=' ')
+    elements[ord('u')] = 'u'
 
-# Answer: a e r d
+for key in elements.keys():
+    print(elements[key], end=' ')
+
+# Answer: 
 
 
 
@@ -917,7 +967,7 @@ print(func(x))
 
 
 
-# Q57: What is the expected output of the following snippet ?
+# Q57: What is the expected output of the following snippet
 
 my_list = list('yoDA')
 print(''.join(my_list).capitalize())
@@ -938,16 +988,17 @@ print(datetime.datetime.now())
 # Answer: module, module, class, function
 
 
-
 # Q58 b): What are the four types below (answer in the order they appear)?              nnnnn
 from datetime import datetime
 
 print(datetime.now())
 
-# Answer: module class class function
+# Answer: module, class, class, function
 
 
+# Q58 c): What are the rules for the 'import' keyword if used without 'from'?                       21-1
 
+# Answer: must be a module; if a directory path is included, e.g., 'import a.b.module_c', 'a.b.' would be required when using the module in code, therefore: a.b.module_c.function(). In short, everything 'after' the import keyword is included in the new namespace entry.
 
 
 
@@ -968,22 +1019,21 @@ else:
 finally:
     print('Done')
 
-# Answer: 
-Error
-Done
+# Answer: Error, Done
 
 
 
 
 
 
-# Q60: What is the output?                                  nnnnn
 
-new_list = ['banana', 'tiger', '789Xy', 'Chess']
+# Q60: What is the output?                                  nnnnn               nnnnn
+
+my_list = ['banana', 'tiger', '789Xy', 'Chess']
 my_list.sort(key = lambda x: x[::-1])
 print(my_list[0]) 
 
-# Answer: 
+# Answer: banana
 
 
 
@@ -1026,32 +1076,37 @@ print(b.set(b.x + 2))
 
 
 
-# Q63: A) What is the output?    B) Can class variables be accessed by instances of those classes?  C) What about class an instance __dict__ ?  D) Provide a reason for the answer to 'B'           nnnnn
+# Q63: A) What is the output?    B) Can class variables be accessed by instances of those classes?          nnnnn       19-1
+# C) Provide a reason for the answer to 'B' 
 
-class Omega:
-    A= True
-    def __init__(self, x, y):
-        self.a = x
-        self.__b = y
-    def set(self, z):
-        Omega.A = z
- 
-omega= Omega(5, 3)
-beta = Omega(10, 5)
-omega.__d = True
-beta.set(5)
-print(omega.__dict__)
-print(omega.A)
-print(beta.A)
+class Zodiac:
+    Alpha = False
+    def __init__(self, m, n):
+        self.m = m
+        self.__n = n
+    def change(self, p):
+        Zodiac.Alpha = p
+
+leo = Zodiac(8, 6)
+virgo = Zodiac(15, 7)
+leo.__o = True
+virgo.change(9)
+print(leo.__dict__)
+print(leo.Alpha)
+print(virgo.Alpha)
 
 """ Answers:
 A) 
+{m: 8, _Zodiac__n: 6, __o: True}
+9
+9
 
 
 
-B) 
-C) 
-D)
+
+
+B) Yes class variables can be accessed by instances of those classes.  The value will be the same for all instances.
+C) Class variables aren't only assigned when an instance is created; and are stored once in memory when the code is executed even if the class is not explicitly used.  If instances are created, they would all refer to the same memory for class variables.
 """
 
 
@@ -1068,8 +1123,9 @@ f.seek(0)
 print(f.read())
 f.close()
 
-# A) Answer: 
-# B) Answer: 
+# A) Answer:
+5, 6, 7, 8, 9, 10, 11, 12, 13, 14 (printed vertically)
+# B) Answer: UnsupportedOperation
 
 
 
@@ -1078,11 +1134,22 @@ f.close()
 
 
 
-# Q65: Can the list [5, 6, 8, 2, 4, 3, 10, 7, 9, 3] be generated by the line below?  Provide a reason.
-
+# Q65:                                                                                                                          nnnnn
+# A) Can the list [5, 6, 8, 2, 4, 3, 10, 7, 9, 3] be generated by the line below?  Provide a reason.
+from random import sample
 x=sample([i for i in range(1,11)], 10)
 
-# Answer: 
+# Answer: No                                                                                                                                                          No, sample()'s algorithm is designed never to pick the same element, this ensures all returned elements are distinct.
+
+
+# B) What is the output?    26-1
+
+from random import sample
+list = [i for i in range(-1, 3)]
+x = sample(list, 5)
+print(x)
+
+# Answer: ValueError
 
 
 
@@ -1107,17 +1174,17 @@ print(extracted)
 extracted = list(filter(lambda x: x[-1].isalnum(), nations))
 print(extracted)
 
-# Answer: 
+# Answer: 2nd option
 
 
 
 # Q66 B): Which character groups exclusively return 'True' for isalnum() ?
 
-# Answer: 
+# Answer: alphabet and base 10 numbers
 
 # Q66 C): Which character groups exclusively return 'True' for isalpha() ?
 
-# Answer: 
+# Answer: alphabet only
 
 
 
@@ -1161,29 +1228,32 @@ def __str__(self):
 
 
 
-# Answer: 
+# Answer: Option 2
 
 # Q67 B): What does super() return?  Where does Python look for an attribute suffixed to super() ?  And what can/can't __name__ be used on?
 
-# Answers: super().__name__ doesn't work because super() returns a 'proxy' object to access the parent class's methods, not the class itself. Since __name__ is a class attribute, not an object attribute, it can't be accessed through the proxy object returned by super()
+# Answers: super().__name__ doesn't work because super() returns a 'proxy' object to access the parent class's methods, not the class itself. Since __name__ is a class attribute, not an object attribute, it can't be accessed through the proxy object returned by super().  It can be used on classes, functions and methods; and modules.
+
+# Q67 C): What type is __bases__ and what does it contain?              nnnnn
+
+# Answer: Tuple containing a class's direct superclasses.
 
 
 
 
 
-
-
-# Q68: 
+# Q68:                                                              nnnnn       20-1
 
 """
 A) Why can't a class constructor return a value?
 
-# Answer: 
+# Answer: Instantiating an instance stores it in a variable so it can be used.  If the constructor returned a value, Python would have to store it instead of a reference to the instance.
 
 
 B) Why can't a class constructor be invoked directly from inside its class?  Can it be invoked from a subclass?
 
-# Answer: 
+# Answer: A class cannot be invoked inside itself because it's not yet fully formed.  Python knows when the flow exits the class block, at which point, setting up the class's namespace is finalised and it
+becomes instantiable.  In contrast, a class may be invoked from its subclass because its definition is complete.
 """
 
 
@@ -1191,8 +1261,9 @@ B) Why can't a class constructor be invoked directly from inside its class?  Can
 
 
 
-# Q69: What is the expected output of the following code snippet?                   nnnnn
+# Q69: What is the expected output of the following code snippets?                   nnnnn           20-1
 
+# A)
 planet_catalog = {1: 'Mercury', 2: 'Venus', 3: 'Earth', 4: 'Mars'}
 
 try:
@@ -1207,7 +1278,36 @@ except IndexError:
 except KeyError:
     print("KeyError")
 
-# Answer: 
+# Answer: Done
+
+
+
+
+
+
+# B)
+book_archive = {
+    1: 'Middlemarch', 2: 'Anna Karenina', 3: 'The Sun Also Rises', 4: 'The Old Man and the Sea',
+    5: 'Great Expectations', 6: 'Heart of Darkness', 7: 'A Passage to India', 8: 'On the Road',
+    9: 'A Farewell to Arms', 10: 'Dracula', 11: 'Slaughterhouse-Five', 12: 'The Stranger',
+    13: 'Gone with the Wind', 14: 'The Call of the Wild', 15: 'The Scarlet Letter', 16: 'The Trial',
+    17: 'The Picture of Dorian Gray', 18: 'The Metamorphosis', 19: 'Catch-22', 20: 'Rebecca',
+    21: 'Bleak House', 22: 'Vanity Fair', 23: 'To the Lighthouse', 24: 'Les Misérables', 25: 'Fahrenheit 451'
+}
+
+try:
+    for literature_index in range(len(book_archive)):
+        if not(book_archive[literature_index + 1].isalpha()):
+            raise ValueError
+    print("Catalog Check Complete")
+except ValueError:
+    print("verror ")
+except IndexError:
+    print(" eirror")
+except KeyError:
+    print(" kerror")
+
+# Answer: verror
 
 
 
@@ -1215,18 +1315,27 @@ except KeyError:
 
 
 
-# Q70: A) # Is id(str1) != id(str2) True or False?
+
+# Q70: A) Is id(str1) != id(str2) True or False?
 str1 = 'Hello'
 str2 = 'Hello'
 
-# Answer: 
+
+
+# Answer: False
+
+
 
 
 # Q70: B) Is id(a) == id(b) True or False?
 a = 256
 b = 256
 
-# Answer: 
+
+
+# Answer: True
+
+
 
 
 # Q70: C) Is id(x) == id(y) True or False?
@@ -1234,38 +1343,1161 @@ x = 257
 y = 257
 
 
-# Answer: 
+
+# Answer: True
+
+
+
 
 # Q70: D) Is id(list1) == id(list2) True or False?
 list1 = [1, 2, 3]
 list2 = [1, 2, 3]
 
-# Answer: 
+
+
+# Answer: False
+
+
 
 
 # Q70: E) Is id(tup1) == id(tup2) True or False?
 tup1 = (1, 2, 3)
 tup2 = (1, 2, 3)
 
-# Answer: 
+
+
+# Answer: True
+
+
 
 
 # Q70: F) Is id(s1) == id(s2) True or False?
 s1 = 'Hello, world!'
 s2 = 'Hello, world!'
 
-# Answer: 
+
+
+# Answer: True
+
+
 
 
 # Q70: G) Is id(f1) == id(f2) True or False?
 f1 = 1.0
 f2 = 1.0
 
+
+
+# Answer: True
+
+
+
+"""
+Immutables: 
+Multiple variables referring to the same value point to the same object in memory (interning); but not always the case for long or complex values.
+
+Mutables:
+A new memory object is always created.
+"""
+
+
+
+""" Q70 (continued):                                                                   nnnnn          nnnnn          nnnnn          21-1
+h) What is the output?   i) Name three mutable data types?
+"""
+
+class MysticCreature:
+    def __init__(self, energy=5):
+        self.energy = +energy
+    def recharge(self, energy=7):
+        self.energy += energy
+        return self.energy
+
+dragon1 = MysticCreature(8)
+phoenix2 = MysticCreature(4)
+dragon1 = phoenix2
+phoenix2.recharge()
+print(dragon1.energy)
+
+# h) Answer: 11
+# i) Answer: lists, dictionaries and byte arrays.
+
+""" Mutable vs Immutable:
+
+Mutables: When assinging a variable to another variable of a mutable object, both will then be pointed to the same object in memory.
+
+Imutables: If assigning one variable (vA) to another (vB), the newly assigned variable (vB) is pointed to the same object in memory as vA, 
+however if we "modified" vA, vA would get a new memory object and vB would stay the same.  
+
+In short:
+Nothing changes until either variable is modified, for mutables, the underlying memory is changed; for immutables, a new memory object is created.
+"""
+
+# j) What is the output?
+
+class Planet:
+    def __init__(self, position=0):
+        self.orbit = position
+    def rotate(self):
+        self.orbit += 1
+
+planet1 = Planet(2)
+planet2 = planet1
+planet2.rotate()
+planet1.rotate()
+print(planet2.orbit)
+
+# j) Answer: 4
+
+
+
+# k) What is the output?
+str1 = 'corsair'
+str2 = 'asrock'
+str3 = 'asus'
+str1 = str2
+str2 += ' manuf'
+print(str1)
+
+# k) Answer: asrock
+
+
+
+
+# Q71: What is the expected output of the following code snippet?               20-1                26-1
+
+
+galaxy = 'Andromeda'
+
+def alter(galaxy):
+    return galaxy[:-5]
+
+try:
+    for star_system in range(3):
+        galaxy = alter(galaxy)
+        assert galaxy
+    print(galaxy)
+except IndexError:
+    print("Stellar Indexing Error")
+except LookupError:
+    print("Galactic Lookup Failure")
+except:
+    print("Cosmic Anomaly Detected")
+
+# Answer: Cosmic Anomaly Detected
+
+
+
+
+
+# Q72: How many characters are removed from the string?
+'sd9f867as7806df8079as6df0896asdf7806789'[:-23]
+
+# Answer: 23
+
+
+
+
+
+# Q73: You are writing a Python function and want to handle both ArithmeticError exceptions and LookupError exceptions under one single except branch.
+
+# The function looks like this :
+
+def my_fun(x,y):                    # line 1
+    try:                            # line 2
+        # my code for try branch    # line 3
+    # catch exceptions here         # line 4
+        # my code for except branch # line 5
+    return None                     # line 6
+
+
+# Which of the below lines do you need to insert in line 4 to achieve this requirement ?
+
+
+except ArithmeticError, LookupError:
+
+except (ArithmeticError, LookupError):
+
+The requirement can't be achieved with one single except branch - each exception needs its own except branch.
+
+except [ArithmeticError, LookupError]:
+
+
+# Answer: except (ArithmeticError, LookupError):
+
+
+
+
+
+
+
+""" Q75: List 7 open() modes and their behaviour.
+
+r: reads from beginning; file must exist or raises FileNotFoundError
+w: creates or truncates; existing file not required.
+
+r+: reads & update; reads or writes starting at the beginning; file must exist.
+w+: write & update: writes or reads from the beginning; existing file not required.
+
+x: creates a file for writing at the beginning; raises FileExistsError if file exists. Safer alternative to 'w'.
+a: append opens or creates a file for writing at the end; existing file not required.
+a+: opens (or creates) a file for appending at the end; existence not required; writes always move the position (back) to the end.
+
+
+
+"""
+
+
+
+
+
+
+
+# Q76: What is the expected output of the following code snippet?
+
+import errno
+
+try:
+    scroll = open('enchanted_scroll.txt', 'wt')
+    for wizard in range(10):
+        spell = "scroll #" + str(wizard+1) + "\n"
+        scroll.write(spell)
+    scroll.close()
+except:
+    print("Mystical I/O error occurred:")
+# End of code
+
+try:
+    grimoire = open("enchanted_scroll.txt", "x")
+    grimoire.write("123")
+    grimoire.close()
+except IOError as incantation:
+    if incantation.errno == errno.ENOENT:
+        print("A")
+    elif incantation.errno == errno.EEXIST:
+        print("B")
+    else:
+        print("C")
+else:
+    print("D")
+
+# Answer: B
+
+
+
+
+# Q77: What is the expected output of the following code snippet?
+
+planet = chr(ord('A') + 1) > chr(ord('k') - 1)
+print(planet)
+
+# Answer: False
+
+
+
+
+
+
+# Q78: What is the output?
+
+print(bool(''), bool([]), bool(0,), bool({}), bool(None), end='')
+print('', bool([[]]), bool((0,)))
+
+# Answer: False False False False False True True
+
+
+
+
+
+
+# Q79: What is the output of the following code if the user enters 67 when prompted?            21-1            26-1
+
+class OutOfBoundsError(Exception):
+    def __init__(self, num, message="Number is not within the specified range"):
+        self.num = num
+        self.message = message
+        super().__init__(self.message, self.num)
+
+try:
+    selection = int(input("Enter integer between 0 and 100: "))
+    if not 1 <= selection <= 87:
+        raise OutOfBoundsError(selection)
+except Exception as ex:
+    for arg in ex.args:
+        print(arg, end=' ')
+
+# Answer: No output.
+
+
+
+
+# Q80: What is the output?
+from math import factorial as superpower_calculation
+
+try:
+    print(superpower_calculation(-6))
+except:
+    print("Error #1")
+except ValueError:
+    print("Error #2")
+
+# Answer: Syntax Error
+
+
+
+
+
+
+# Q81: What is the expected output of the following code snippet?
+
+class Tree:
+    def __init__(self, number):
+        self.leaf = number
+
+class Oak(Tree):
+    pass
+
+class Pine:
+    def __init__(self, number):
+        self.leaf = number + 2
+
+class Maple(Pine):
+    def __init__(self, number):
+        super().__init__(number + 2)
+
+class Birch(Oak, Maple):
+    pass
+
+b = Birch(3)
+print(b.leaf)
+
+# Answer: 3
+
+
+
+
+
+
+# # Q82: What is the expected output of the following code snippet?             26-1 (use second Q82 below)
+
+# class Element:
+#     E = 0
+#     def __init__(self, value):
+#         self.atom = value
+
+# class Metal(Element):
+#     M = 1
+#     def __init__(self, value):
+#         self.atom = value + 1
+#         super().__init__(value - 1)
+
+# class Gas:
+#     G = 2
+#     def __init__(self, value):
+#         self.atom = value + 2
+
+# class Liquid(Metal, Gas):
+#     L = 3
+
+# l = Liquid(4)
+# print(l.atom)
+
+# # Answer: 
+
+
+
+# Q82: What is the expected output of the following code snippet?
+
+class Spice:
+    S = 0
+    def __init__(self, quantity):
+        self.grain = quantity
+
+class Herb(Spice):
+    H = 1
+    def __init__(self, quantity):
+        self.grain = quantity + 1
+        super().__init__(quantity - 1)
+
+class Flavor:
+    F = 2
+    def __init__(self, quantity):
+        self.grain = quantity + 2
+
+class Seasoning(Herb, Flavor):
+    Se = 3
+
+s = Seasoning(5)
+print(s.grain)
+
+# Answer: 4
+
+
+
+
+
+
+# Q83 
+# a): Which of the five statements below are correct? (pick 2)                             21-1
+"""
+1. UTF-8 is based solely on the ASCII encoding.
+
+2. ASCII can encode more than a million characters.
+
+3. UTF-8 is the eighth version of the UTF standard, replacing UTF-7.
+
+4. With UTF-8 some characters may use 8 bits for their code points while others may use 16 bits.
+
+5. UTF-8 can encode 1,112,064 characters.
+"""
+# Answer: 4, 5
+
+
+# b) Which of the following is a true statement? (Select 2 Answers)                         8-2
+
+"""
+Unicode is a standard
+
+UTF-8 is an encoding
+
+Unicode is an encoding
+
+UTF-8 is a standard
+
+UTF-8 is the only encoding apart from ASCII
+"""
+
 # Answer: 
 
 
 
 
+
+
+
+# Q84: What are each of these constants?                                                   22-1
+
+"""
+errno.EACCES → 
+
+# Answer: 
+
+errno.EBADF → 
+
+# Answer: 
+
+errno.EEXIST → 
+
+# Answer: 
+
+errno.EFBIG → 
+
+# Answer: 
+
+errno.EISDIR → 
+
+# Answer: 
+
+errno.EMFILE → 
+
+# Answer: 
+
+errno.ENOENT → 
+
+# Answer: 
+
+errno.ENOSPC → 
+
+# Answer: Got all correct (26-1)
+
+"""
+
+
+
+
+# Q85:                                                                          21-1
+
+""" You are being asked to create a Python program that will randomly return five unique integers between 0 and 132 (both 0 and 132 are included as 
+possible choices). Which code will achieve this requirement? """
+
+
+# Option A
+import random
+print("Selected constellations are: ", random.sample(range(133), k=5))
+
+# Option B
+import random
+print("Selected constellations are: ", random.randrange(0, 132, 7))
+
+# Option C
+import random
+print("Selected constellations are: ", random.choices(range(132), k=5))
+
+# Option D
+import random
+print("Selected constellations are: ", [random.randint(0, 132) for space_object in range(5)])
+
+
+# Answer: A
+
+
+
+
+
+
+
+
+# Q86: Wich of the following evaluates to True given the following code? (Select 2 Answers)             5-2
+
+a = "television"
+
+print(a.index('ele') == 1)              # 1
+
+print(a.index('e', 2) == 1)             # 2
+
+print(a.index('e', 2) == 3)             # 3
+
+print(a.index('i') == 4)                # 4
+
+print(a.index('i') == 6)                # 5
+
+# Answer: 1, 3
+
+
+
+
+
+# Q87: Which of the following is True about bytearrays? (Select 2 Answers)
+
+"""
+1) bytearrays can store characters
+
+2) The readinto() method can be used to read bytes from a file into an existing bytearray
+
+3) bytearrays can only have integer values between 0 and 255 inclusive
+
+4) bytearrays are immutable
+
+5) ytearrays cannot be written to files
+"""
+
+# Answer: 
+
+
+
+
+
+
+# Q88: What is the expected output of the following code snippet?
+
+class GalaxyError(Exception):
+    pass
+ 
+try:
+    raise Exception("X", "Y")
+except GalaxyError:
+    print("Greetings", end=" ")
+finally:
+    print("Farewell")
+
+# Answer: 
+
+
+
+
+
+# Q89: What is the expected output?                 8-2
+
+class A:
+    def __init__(self, var):
+        A.var = var
+ 
+a = A(10)
+b = A(100)
+print(a.var)
+
+# Answer: 
+
+
+
+
+
+# Q90: 
+# a) What is the expected output of the following code snippet?                 8-2
+
+creature_stats = {'goblin':1, 'troll':2}
+try:
+    creature_stats[1]
+except IndexError:
+    print('Cave', end=' ')
+except Exception as exc:
+    print(exc.args, end=' ')
+
+# Answer: 
+
+# b) What distinguishes KeyError's error argument handling, specifically when accessing a non-existent key in a dictionary, from that of other Python error types?
+
+# Answer:                                                                                                                                                                                       The non-existent key itself is passed as an argument, instead of a description of the error.
+
+
+
+
+
+
+# Q91: What is the expected output of the following code snippet?                 8-2
+
+string_sequence = "def"
+ 
+for element in string_sequence:
+    element = 'y'
+ 
+print(string_sequence)
+
+# Answer: 
+
+
+
+
+
+
+# Q92: Given the following classes:                                             8-2
+
+class Alpha:
+    pass
+class Beta(Alpha):
+    pass
+class Gamma(Beta):
+    pass
+class Delta(Alpha):
+    pass
+
+# Which of the following are correct declarations of subclasses? (Select 2 Answers)
+
+class subclass1(Alpha, Beta): # a
+    pass
+
+class subclass2(Gamma, Delta): # b
+    pass
+
+class subclass3(Alpha, Delta): # c
+    pass
+
+class subclass4(Beta, Gamma): # d
+    pass
+
+class subclass5(Delta, Gamma): # e
+    pass
+
+
+# Answer: 
+
+
+
+
+
+# Q93:                                                                      9-2
+
+"""
+The file abc.txt contains the following 3 lines of text:
+
+abc
+def
+ghi
+
+The output of the below snippet is: 
+<_io.TextIOWrapper name='abc.txt' mode='r' encoding='cp1252'>
+What would happen if we tried to iterate over the stream directly?
+"""
+
+file = open('abc.txt')
+print(file)
+
+# Answer: Acting as an iterator, io.TextIOWrapper calls __next__, printing the text up to the next new line character until StopIteration is raised when reaching EOF.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Q94: What is the expected output of the following code snippet?                 8-2
+class ExampleException(Exception):
+    def __init__(self, msg):
+        super().__init__(msg)
+    
+    def __str__(self):
+        return 'a'
+
+try:
+    raise ExampleException('test')
+except Exception as e:                      # see note (scroll right)                                                                                                           This line does NOT alter the instance of the exception that was raised (see below**)!
+    print(e)
+
+# Answer: 
+
+
+
+
+
+
+# Q95: Essentially, what is the only real limit of the 'del' keyword?                 8-2
+
+# Answer: 
+
+
+
+
+
+
+# Q96: What is the output of the following snippet of code?                 8-2
+
+class A:
+    pass
+class B:
+    pass
+class C(B):
+    pass
+ 
+c = C()
+print(isinstance(c, (B,A)))
+
+# Answer: 
+
+
+
+
+
+# Q97: Which of the following snippets outputs 123 to the screen? (Select two answers).
+
+# Option A
+print(sorted("abc"))
+
+# Option B
+temporary_variable = "abc".sort()
+print(str(temporary_variable))
+
+# Option C
+print(''.join(sorted("abc")))
+
+# Option D
+temporary_variable2 = list("abc")
+temporary_variable2.sort()
+print(''.join(temporary_variable2))
+
+# Answer: 
+
+
+
+
+
+
+# Q98: What is the output of the following snippet of code?                 11-2
+x = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+ 
+def func(data):
+    res = data[0][0]
+    for da in data:
+        for d in da:
+            if res < d:
+                res = d
+    return res
+ 
+print(func(x[0]))
+
+# Answer: 
+
+
+
+
+
+
+
+
+
+
+# Q99: What is the output of the 2 following  snippets?
+
+class E (Exception):
+	def __init__(self, message):
+		self.message = message
+	
+	def __str__(self):
+		return "it's nice to see you"
+
+try:
+    print("I feel fine")
+    raise E("what a pity")
+except Exception as e:
+    print(e)
+else:
+    print("the show must go on")
+
+
+
+# Answer: 
+    
+
+"""
+Python exceptions are designed so that more general except branches are capable of catching a wider number of exceptions.  This means a superclass in
+the except branch can catch its subclass exceptions.
+To catch a more concrete exception when both concrete and non-concrete branches exist, the subclasse(s) or 'more concrete' exception(s) should be placed first.
+"""
+
+
+
+
+
+class E (Exception):
+	def __init__(self, message):
+		self.message = message
+	
+	def __str__(self):
+		return "it's nice to see you"
+
+try:
+    print("I feel fine")
+    raise Exception("what a pity")
+except E as e:
+    print(e)
+else:
+    print("the show must go on")
+
+
+
+# Answer: 
+
+
+
+"""
+However, if the except branch is a subclass of the exception (i.e., the exception being RAISED is the parent), it can not catch the exception.  This is similar
+to how an instance of a superclass doesn't have the attributes of its subclasses.
+
+If subclasses could catch superclass exceptions, it would lead to a scenario where very specific handlers are invoked for general problems they're not designed
+to address directly, potentially leading to inappropriate error handling.
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Q100: What is the output?
+print('' in '', '' in ' a')
+
+# Answer: 
+
+
+
+
+
+
+
+# Q101 - Error Handling
+
+# Q: Which of the following is false?
+
+
+#1 A try statement can have a finally clause without an except clause.
+
+#2 A try statement can have one or more finally clauses.
+
+#3 A try statement can have one or more except clauses.
+
+#4 A try statement can have a finally clause and an except clause.
+
+# Answer: 
+
+
+
+
+
+
+# Q102: 
+
+# A) Given the code below, complete the display() method body in a way that will ensure that the get() method is properly invoked.
+
+class Artifact:
+    def __init__(self):
+        self.collection = 1
+ 
+    def retrieve(self):
+        return self.collection
+ 
+    def display(self):
+        # Insert a method here
+ 
+ 
+item = Artifact()
+item.display()
+
+# (Select two answers.)
+
+print(Artifact.retrieve(self))
+
+print(Artifact.retrieve())
+
+print(retrieve())
+
+print(self.retrieve())
+
+# Answer: 
+
+
+
+
+# B) Comment out the incorrect lines, make two small corrections, then run the program to check it works.
+
+class ScienceExperiment:
+    variable = 'Experiment Data'
+    def __init__(self):
+        experiment_note = 'Note Content'
+        print(self.experiment_note)
+
+
+    def record(self):
+        observation = 'Observation Details'
+        print(self.observation)
+
+test = ScienceExperiment()
+test.record()
+
+ScienceExperiment.experiment_note
+ScienceExperiment.record()
+print(test.__dict__)
+print(test.experiment_note)
+
+
+# Answer (did it work)?:                                                                                                                                                                                # Hint: 'self'
+
+
+
+
+
+
+
+
+
+# Q103: 
+
+# A) Is the result of the following line 0 or 0.0?
+
+print(1 // 2 * 3)
+
+
+# Answer: 
+
+
+# B) What's the result this time?  Why?
+
+print(9 // 3 // 1.0)
+
+# Answer:                                                                                                                                                     # The divide (/) operator always returns a float.  The floor divide (aka int division) operator (//) truncates to an integer if all operands are ints.  If at least one operand is a float, '//' returns a float.
+
+
+
+
+
+
+#Q104: What is the output and why?
+
+def t():
+    return 'Peter'           'Wellert'
+
+print(t())
+
+
+# Answer: 
+
+
+
+
+
+
+#Q105: 
+
+# A) Provide a detailed list of all the output for this snippet (any order will do).
+
+class MyClass:
+    """docstring test"""
+
+    class_var = 1
+ 
+    def __init__(self):
+        self.instance_var = 1
+ 
+    def my_meth(self):
+        pass
+ 
+ 
+object = MyClass()
+
+for i in MyClass.__dict__:
+    print(i, '\t\t', MyClass.__dict__[i])
+
+
+# Answer:
+"""
+__module__      __main__
+__dict__        <attribute '__dict__' of 'MyClass' objects>
+__weakref__     <attribute '__weakref__' of 'MyClass' objects>
+__doc__         docstring test
+
+__init__        <function MyClass.__init__ at 0x...>
+my_meth         <function MyClass.my_meth at 0x...>
+class_var       1
+"""
+
+
+
+
+# Q106: What is the output for each snippet?
+
+lst = [1, 2]
+lst += (1, 2, 3)
+print(lst)
+# Answer: 
+
+print([1, 2] * 2 + [3])
+# Answer: 
+
+print([1, 2] + list((3, 4)))
+# Answer: 
+
+print([1, 2] + (3, 4))
+# Answer: 
+
+lst = [1, 2]
+lst.append([3, 4])
+print(lst)
+# Answer: 
+
+lst = [1, 2, 3]
+lst.append((1,))
+print(lst)
+# Answer: 
+
+lst = [1, 2, 3]
+lst += (1,)
+print(lst)
+# Answer: 
+
+print([[]] * 3)
+# Answer: 
+
+tup1 = (1, 2)
+tup2 = (3, 4)
+print([tup1] + [tup2])
+# Answer: 
+
+lst = [1, 2, 3]
+(lst.append(4), lst)[1]
+print(lst)
+# Answer: 
+
+print([x for x in (1, 2)] + [y for y in [3, 4]])
+# Answer: 
+
+lst = [1, 2, 3]
+lst *= (1,)
+print(lst)
+# Answer: 
+
+lst = [1, 2, 3]
+lst += 1,
+print(lst)
+# Answer: 
+
+
+"""Info:
+
++       Concatenates two sequences of the same type, returning a new sequence.
++=      For lists: extends the sequence in-place with elements from another sequence or iterable; for strings and tuples, concatenates and reassigns due to immutability.
+
+*       Repeats the sequence for a given integer, returning a new sequence.
+*=      Repeats the sequence in-place for lists; for strings and tuples, creates and reassigns a new repeated sequence.
+
+
+"""
+
+
+
+
+# Q107: What does each command do?
+
+cd ../
+cd ./
+cd /
+
+"""
+Answers:
+
+
+
+"""
+
+
+
+
+
+# Q108: Copy to an editor and check your answer for each expression.
+
+print(True if False else True) # 
+print(True if True else False) # 
+print('Yes' if False else 'No') # 
+print(False if False else True) # 
+print(0 if True else 1) # 
+print(True if False else False) # 
+print('A' if not False else 'B') # 
+print(False if True else False) # 
+print('Python' if 10 > 5 else 'Java') # 
+print(False if True else True) # 
+print('Not Empty' if '' else 'Empty') #  
+print(True if False else True) # 
+
+
+
+
+
+# Q109: What is the output?  Why?
+
+class Un:
+    value = "Eins"
+ 
+    def say(self):
+        return self.value.lower()
+  
+class Deux(Un):
+    value = "Zwei"
+  
+class Troi(Un):
+    def say(self):
+        return self.value.upper()
+  
+class Quatre(Troi, Deux):
+    pass
+
+d = Quatre()
+b = Deux()
+
+print(Un.value, Deux.value, d.value, b.value)
+
+# Answer: 
 
 
 
@@ -2463,4 +3695,9 @@ print([[x + y for x in range(2) if (x + y) % 2 == 0] for y in range(2)])  # [[0]
 
 
 
-# practice 2^0, 2^1, 2^2, 2^3, 2^4 and 0^2, 1^2, 2^2, 3^2, 4^2
+# practice:
+ 2**0, 2**1, 2**2, 2**3, 2**4 and 0**2, 1**2, 2**2, 3**2, 4**2
+    double last                         square left operand
+
+
+# basic recursion?
