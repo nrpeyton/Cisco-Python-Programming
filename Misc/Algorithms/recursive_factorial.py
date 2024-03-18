@@ -29,3 +29,5 @@ factorial(3):
     n3 * 2 = 6
 
 """
+
+# Diagram: /media/nick/OCZ-VERTEX4/Backup/Education/Computer Science

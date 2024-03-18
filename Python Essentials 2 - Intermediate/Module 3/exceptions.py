@@ -25,6 +25,95 @@ print(e) # <<< ERROR: This last line will raise a NameError because as 'e' is a 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+##############################################################################################################
+"""
+                            Priority __str__ / e.args:
+
+In exceptions, if the __str__ method is inherited, it will use the built-in self.args (e.args) tuple, which can be overriden.
+
+__STR__ LOOKS FOR 'args' tuple in `self`; priority is:
+1. `self.args` in CustomException's constructor (overriding inherited self.args).
+2. If not overriden,  the built-in exception's constructor.  Any arbitrary number of arguments passed UP are automatically assigned to `self.args`.
+3. Even when overriding super().__init__ with 'pass', Python is sneaky. e.args still exists.  Any argsuments included when the exception is raised are still assigned to e.args.  Uncertain of this, but maybe __new__ creates e.args when the exception is instantiated?
+
+"""
+
+#1
+class CustomException(Exception):
+    
+    def __init__(self, msg):
+        super().__init__(msg, msg, msg, msg, msg, msg, msg, msg)
+        self.args = ('test',) # printed
+
+try:
+    raise CustomException('this is a message') # not printed
+except CustomException as e:
+    print(e) # 
+
+
+#2
+class CustomException(Exception):
+    
+    def __init__(self, msg):
+        super().__init__(msg, msg, msg, msg, msg, msg, msg, msg) # arbitrary
+
+try:
+    raise CustomException('this is a message')
+except CustomException as e:
+    print(e) # printed 8 times
+
+
+
+
+#3
+class CustomException(Exception):
+    
+    def __init__(self, msg):
+        pass
+
+try:
+    raise CustomException('this is a message')
+except CustomException as e:
+    print(e.args) # still prints
+
+
+
+
+
+
+##############################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                             # CLOSELY RELATED TO BUILT-IN EXCEPTIONS ()
 
 class MyZeroDivisionError(ZeroDivisionError):	

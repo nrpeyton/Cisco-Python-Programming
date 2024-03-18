@@ -32,6 +32,9 @@ file.readinto(bytearray): # Reads bytes from the file into 'bytearray'. Returns 
 bytearray_variable = bytearray(100)
 file.readinto(bytearray_variable)
 
+MUTABILITY:
+Bytearray objects are mutable and can be modified.
+Bytes objects are immutable.
 
 """REMEMBER: Use file.close() or a 'with' statement for automatic closing and saving. 
 

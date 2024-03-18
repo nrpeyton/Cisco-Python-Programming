@@ -4,8 +4,15 @@ def fib(n):
 
 print(fib(int(input('Enter Fib Index: '))))
 
+# Diagram: /media/nick/OCZ-VERTEX4/Backup/Education/Computer Science
+
+
+
+
+
+
 # def fib(n, memo={}):
-#     if n in memo:
+#     if n in memo:8
 #         return memo[n]
 #     if n < 3: 
 #         return 1

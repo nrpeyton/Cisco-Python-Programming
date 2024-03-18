@@ -30,3 +30,15 @@ class A:
 print(A.__module__)
 print(A.__name__)
 print(A.__init__.__module__)
+
+
+
+elements = {}
+for character in 'Gandalf':
+    if character in 'Saruman':
+        elements[ord(character)] = character
+else:
+    elements[ord('u')] = 'u'
+
+for key in elements.keys():
+    print(elements[key], end=' ')

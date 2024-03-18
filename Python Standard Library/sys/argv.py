@@ -1,4 +1,4 @@
-# TERMINAL/COMMAND PROMPT ARGUMENTS (i.e., flags)
+# TERMINAL/COMMAND PROMPT ARGUMENTS (e.g., flags, arguments)
 
 print('hello')
 

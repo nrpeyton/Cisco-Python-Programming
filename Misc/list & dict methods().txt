@@ -1,21 +1,21 @@
-LIST METHODS                                                                                        SYNTAX
-------------                                                                                        ------
+LIST METHODS                                                                                            SYNTAX
+------------                                                                                            ------
 
 copy() – Returns a copy of the list                                                                 
 
-count() – Returns the number of elements with the specified value                                   
-index() – Returns the index of the first element with the specified value                           list.index(x[, start[, end]])
-pop() – (Returns) and removes the element at the specified position                                               
+count() – Returns the number of elements with the specified value*                                   
+index() – Returns the index of the first element with the specified value* or raises ValueError         list.index(x[, start[, end]])                                   
+pop() – (Returns) and removes the element at the specified position or raises IndexError                                              
 
 insert() – Adds an element at the specified position                                                
 append() – Adds an element at the end of the list                                                   
-extend() – Add the elements of a list (or any iterable), to the end of the current list             
+extend() – Add the elements of any iterable, to the end of the current list             
 
-sort() – Sorts the list in-place.  'key=' maps argument-free function to each list element.          list.sort(reverse=True|False, key=myFunc)        
+sort() – Sorts the list in-place.  'key=' maps argument-free function to each list element.             list.sort(reverse=True|False, key=myFunc)        
 reverse() – Reverses the order of the list                                                          
 
-remove() – Removes the first item with the specified value                                           
-clear() – Removes all the elements from the list                                                    
+remove() – Removes the first item with the specified value* or raises ValueError                                          
+clear() – Removes all the elements from the list                               
 
 
 

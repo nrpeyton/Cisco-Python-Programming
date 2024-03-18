@@ -1,9 +1,10 @@
 import platform
+print(platform.machine()) # Output: x86_64                                  OR          AMD64
 
-print(platform.processor()) # Output: Processor Type, e.g., x86 64
+print(platform.processor()) # Output: Processor Type, e.g., x86_64          OR          Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 
 
-print(platform.system()) # Output: Linux         OR           Windows
+print(platform.system()) # Output: Linux                                    OR          Windows
 
 
 print(platform.platform()) # Output: Linux-6.2.0-34-generic-x86_64-with-glibc2.37         OR           Windows-10-10.0.18362-SP0
@@ -28,6 +29,7 @@ print(platform.version()) # Output: #34-Ubuntu SMP PREEMPT_DYNAMIC Mon Sep  4 13
 
 
 print('\n', 'Python Implimentation & Version:', platform.python_implementation(), platform.python_version_tuple())
+
 
 
 
