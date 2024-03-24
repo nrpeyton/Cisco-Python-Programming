@@ -37,8 +37,8 @@ It serves as a personal reference and a working document that evolves with my gr
   - Calendar Module
 
 ### Python Standard Library
--/sys
-  -argv
+- sys
+  - argv
 
 ### University/Cisco/OpenEDG
 -Course Completion Certificate
@@ -47,6 +47,12 @@ It serves as a personal reference and a working document that evolves with my gr
 
 ### Misc Folder
 - Algorithms
+  - Binary Search
+  - Recursives
+    - Factorial
+    - Fibonacci
+    - Palindrome
+    - Powers
 - Bitwise Operations
 - Data Structures
 - Exceptions
