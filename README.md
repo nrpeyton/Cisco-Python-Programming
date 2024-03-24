@@ -36,12 +36,23 @@ It serves as a personal reference and a working document that evolves with my gr
   - Date, Time, and Datetime
   - Calendar Module
 
+### Python Standard Library
+-/sys
+  -argv
+
+### University/Cisco/OpenEDG
+-Course Completion Certificate
+-PCEP Exam Certificate
+-PCAP Exam Certificate
+
 ### Misc Folder
+- Algorithms
 - Bitwise Operations
 - Data Structures
 - Exceptions
-- List Methods
+- List & dict Methods
 - Stream Methods
+- Python Keywords
 - String Methods
 
 ## Using This Repository

@@ -1,0 +1,43 @@
+PCEP Module 4:
+
+-Converting from European 'litres per 100km' to American 'mpg' and vice versa
+
+- 2.4.1.6 LAB: A LED Display (made a good attempt that works, but need to try it with only 7 segments)
+
+
+PCAP MODULE 4:
+
+- 4.4.1.8 LAB: Struggled with recursion in the directory search lab. Managed to print two out of three output lines correctly 
+but decided it wasn't efficient to continue. Reviewed the official solution, which was also flawed—it printed all lines but 
+included an incorrect, extra folder in each directory path. My next step is to find a reliable external example focusing on 
+recursion for directory traversal.  Original lab below for reference:
+
+                                    LAB: Directory Search with os Module
+
+DIFFICULTY: Easy
+TIME: 15-30 minutes
+
+OBJECTIVES:
+-Boost skills in OS interaction using Python.
+-Implement practical applications of the os module functions.
+
+SCENARIO:
+Develop a program to recursively search for directories in a specified path using Python's os module.
+
+[labs_to_be_revisited_directory_tree.png]
+
+FEATURES:
+-Implement a function `find` that takes two arguments: `path` and `dir`.
+--`path` is where the search begins, and can be either relative or absolute.
+--`dir` is the directory name you're searching for.
+-Output the absolute paths of any matching directories.
+-Execute the search recursively to include all subdirectories.
+
+EXAMPLE:
+Input: path="./tree", dir="python"
+Output:
+.../tree/python
+.../tree/cpp/other_courses/python
+.../tree/c/other_courses/python
+
+
