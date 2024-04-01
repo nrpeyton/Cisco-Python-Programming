@@ -1,10 +1,10 @@
 # Ignore specific directory
-University, Cisco, Edube & Pyth Institute/Assessment/
+University, Cisco, OpenEDG/Assessment/
 
 # Ignore specific files
-University, Cisco, Edube & Pyth Institute/Labs to be revisited.txt
-University, Cisco, Edube & Pyth Institute/labs_to_be_revisited.directory_tree.png
-University, Cisco, Edube & Pyth Institute/NetAcad Screenshot - PCAP Completed.png
+University, Cisco, OpenEDG/Labs to be revisited.txt
+University, Cisco, OpenEDG/labs_to_be_revisited.directory_tree.png
 times_table_practice.py
 misc_tests.py
 misc_tests2.py
+
